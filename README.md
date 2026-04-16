@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="figures/logo_v1.png" width="200">
+  <img src="figures/logo_v2.png" width="200">
 </p>
 
 # Awesome Network Engineering Agent
