@@ -1,35 +1,40 @@
-# Contributing Guide
+# 贡献指南
 
-Thank you for your interest in contributing to Awesome Network Engineering Agent!
+感谢你对 Awesome Network Engineering Agent 的关注！
 
-## How to Add a Paper
+## 如何添加论文
 
-1. Fork this repository
-2. Find the appropriate section in `README.md`
-3. Add your entry in the following format:
+1. Fork 本仓库到你的 GitHub 账号
+2. 在 `README.md` 中找到对应的章节
+3. 按以下格式添加一行：
 
 ```markdown
-| [Paper Title](url) | Venue Year | One-line description |
+| 论文标题 | 会议/期刊 年份 | 一句话描述 |
 ```
 
-4. Submit a pull request with a brief description
+4. 提交 Pull Request，简要说明添加了什么
 
-## Guidelines
+## 章节说明
 
-- Papers should be published or accepted at recognized venues (IEEE, ACM, ICLR, NeurIPS, etc.)
-- arXiv preprints are acceptable if they are recent and relevant
-- Each entry needs: title with link, venue/year, and a concise description
-- Keep descriptions to one line (under 100 characters)
+| 章节 | 应该放什么 |
+|------|-----------|
+| 1. What is | 综述、定义性文章、领域愿景 |
+| 2. How to Build | Agent 架构设计、训练方法、提示策略 |
+| 3. How to Scale | 强化学习、工具集成、技能库、记忆机制 |
+| 4. How to Evaluate | 评测基准、评估框架 |
 
-## Sections
+## 论文收录标准
 
-| Section | What belongs here |
-|---------|-------------------|
-| 1. What is | Surveys, position papers, definitions |
-| 2. How to Build | Agent architectures, training methods, prompting strategies |
-| 3. How to Scale | RL, tools, memory, self-evolution techniques |
-| 4. How to Evaluate | Benchmarks, simulators, evaluation frameworks |
+- 已发表或已被接收的会议/期刊论文优先（IEEE、ACM、ICLR、NeurIPS 等）
+- arXiv 预印本可以收录，但请标注 arXiv 及年份
+- 每条描述控制在一行以内
 
-## Questions?
+## 其他贡献方式
 
-Open an issue or contact the maintainers.
+- 发现链接失效或信息错误：提 Issue
+- 建议新的分类或章节：提 Issue 讨论
+- 补充论文的代码仓库链接
+
+## 联系方式
+
+有任何问题，欢迎在 GitHub 上提 Issue。
