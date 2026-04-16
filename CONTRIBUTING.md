@@ -25,9 +25,19 @@
 
 ## 论文收录标准
 
-- 已发表或已被接收的会议/期刊论文优先（IEEE、ACM、ICLR、NeurIPS 等）
+- 已发表或已被接收的会议/期刊论文优先
 - arXiv 预印本可以收录，但请标注 arXiv 及年份
 - 每条描述控制在一行以内
+
+推荐来源：
+
+| 类别 | 期刊/会议 |
+|------|----------|
+| IEEE 通信学会期刊 | JSAC, COMST, TWC, TCCN, TON, TCOM, TNSE, TVT, TNSM |
+| IEEE 通信学会会议 | Globecom, ICC, WCNC, PIMRC |
+| AI/ML 顶会 | ICLR, NeurIPS, ICML, AAAI |
+| 软件工程 | ICSE, ASE, FSE, IEEE TSE, TOSEM |
+| 网络系统 | SIGCOMM, NSDI, CoNEXT, SIGMETRICS |
 
 ## 其他贡献方式
 
