@@ -12,6 +12,14 @@ A curated list of papers, benchmarks, and tools for AI agents in network enginee
 
 ---
 
+## News
+
+**[2026/04/16]** We release the initial version of Awesome Network Engineering Agent!
+
+**[2026/04/16]** We successfully reproduced [NetArena](https://github.com/Froot-NetSys/NetArena) (ICLR 2026) MALT benchmark with Qwen3.5-Flash.
+
+---
+
 ## Table of Contents
 
 - [1. What is a Network Engineering Agent?](#1-what-is-a-network-engineering-agent)
@@ -217,3 +225,15 @@ If you find this resource useful, please cite:
   url={https://github.com/tenderzada/awesome-network-engineering-agent}
 }
 ```
+
+---
+
+## Star History
+
+<a href="https://star-history.com/#tenderzada/awesome-network-engineering-agent&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=tenderzada/awesome-network-engineering-agent&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=tenderzada/awesome-network-engineering-agent&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=tenderzada/awesome-network-engineering-agent&type=Date" />
+ </picture>
+</a>
