@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="figures/logo_v1.png" width="200">
+</p>
+
 # Awesome Network Engineering Agent
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
