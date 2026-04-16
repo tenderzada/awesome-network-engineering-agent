@@ -33,8 +33,8 @@
 
 | 类别 | 期刊/会议 |
 |------|----------|
-| IEEE 通信学会期刊 | JSAC, COMST, TWC, TCCN, TON, TCOM, TNSE, TVT, TNSM |
-| IEEE 通信学会会议 | Globecom, ICC, WCNC, PIMRC |
+| IEEE 通信学会期刊 | JSAC, COMST, TWC, TCCN, TON, TCOM, TNSE, TVT, TNSE |
+| IEEE 通信学会会议 | Globecom, ICC, WCNC, ICCT, ICCC, VTC |
 | AI/ML 顶会 | ICLR, NeurIPS, ICML, AAAI |
 | 软件工程 | ICSE, ASE, FSE, IEEE TSE, TOSEM |
 | 网络系统 | SIGCOMM, NSDI, CoNEXT, SIGMETRICS |
