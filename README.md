@@ -4,7 +4,7 @@
 
 A curated list of papers, benchmarks, and tools for AI agents in network engineering.
 
-> Network Engineering Agents are AI systems that autonomously understand network intent, interact with network environments, generate configurations or optimization decisions, and verify outcomes through closed-loop feedback. They represent the convergence of large language models, agentic AI, and telecommunications/networking.
+> Network Engineering Agents are AI systems that autonomously understand network intent, interact with network environments, generate configurations or optimization decisions, and verify outcomes through closed-loop feedback.
 
 ---
 
@@ -22,12 +22,11 @@ A curated list of papers, benchmarks, and tools for AI agents in network enginee
 - [3. How to Scale?](#3-how-to-scale)
   - [3.1 Scaling with RL](#31-scaling-with-rl)
   - [3.2 Scaling with Tools](#32-scaling-with-tools)
-  - [3.3 Scaling with Memory](#33-scaling-with-memory)
+  - [3.3 Scaling with Skills](#33-scaling-with-skills)
+  - [3.4 Scaling with Memory](#34-scaling-with-memory)
 - [4. How to Evaluate?](#4-how-to-evaluate)
   - [4.1 Static Benchmarks](#41-static-benchmarks)
   - [4.2 Dynamic Benchmarks](#42-dynamic-benchmarks)
-  - [4.3 Simulation Platforms](#43-simulation-platforms)
-  - [4.4 Open Challenges](#44-open-challenges)
 - [Contributing](#contributing)
 
 ---
@@ -135,8 +134,6 @@ Reinforcement learning in network environments to improve agent policies.
 | RLHF for networks | Human feedback on network configuration quality | (unexplored) |
 | Reward design | Define rewards for network KPIs (throughput, latency, SLA) | PC-LLM, DRL for spectrum access |
 
-**Open question**: Can Scaling RL paradigms (e.g., AReaL, OpenHands) transfer from software engineering to network engineering?
-
 ### 3.2 Scaling with Tools
 
 Expanding agent capabilities through external tools and APIs.
@@ -144,11 +141,21 @@ Expanding agent capabilities through external tools and APIs.
 | Approach | Description | Papers |
 |----------|-------------|--------|
 | MCP integration | Standardized tool interface for network operations | (proposed) |
-| Skill library | Reusable network operation skills accumulated over tasks | Analogy: Voyager skill library |
 | API-defined action space | Constrain agent to valid network operations via API | Intent-LLM (VipeeGPT API design) |
 | Verification tools | Batfish, HeaderSpace analysis for safety checking | NetLLMBench |
 
-### 3.3 Scaling with Memory
+### 3.3 Scaling with Skills
+
+Accumulating reusable network operation skills across tasks.
+
+| Approach | Description | Papers |
+|----------|-------------|--------|
+| Skill library | Agent stores successful operation sequences for reuse | Analogy: Voyager skill library |
+| Skill discovery | Automatically extract reusable skills from past trajectories | (unexplored in networking) |
+| Skill composition | Combine atomic skills into complex multi-step operations | (unexplored in networking) |
+| Skill injection | Provide domain skill documents to boost agent performance | SWE-Skills-Bench, SWE-Bench 5G spec-as-skill |
+
+### 3.4 Scaling with Memory
 
 Enabling agents to accumulate and reuse experience across tasks.
 
@@ -157,8 +164,6 @@ Enabling agents to accumulate and reuse experience across tasks.
 | Cross-task experience | Remember past diagnoses to speed up future troubleshooting | Analogy: MemoryBank, A-MEM |
 | Network state memory | Persistent knowledge of topology, history, SLA | Analogy: LD-Agent dual memory |
 | Retrieval-augmented | Retrieve relevant past cases or spec documents at inference | RAG for network operations |
-
-**Open question**: What should a network agent remember? Topology snapshots? Past fault-fix pairs? Operator preferences?
 
 ---
 
@@ -182,24 +187,6 @@ Runtime-generated queries to avoid data contamination.
 | Benchmark | Venue | Tasks | Key Feature |
 |-----------|-------|-------|-------------|
 | [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Route, MALT, K8s | Dynamic query generation, A2A protocol, 3-metric evaluation |
-
-### 4.3 Simulation Platforms
-
-| Platform | Domain | Language | Docker-Ready |
-|----------|--------|----------|-------------|
-| [Containerlab](https://containerlab.dev/) | Multi-vendor routing | Go/YAML | Native |
-| [Mininet](http://mininet.org/) | SDN / L2-L3 | Python | Native |
-| [ns3-gym](https://github.com/tkn-tub/ns3-gym) | Full-stack wireless | C++/Python | Available |
-| [mobile-env](https://github.com/stefanbschneider/mobile-env) | Wireless cellular | Python | Trivial |
-| [NetworkGym](https://github.com/IntelLabs/networkgym) | 5G slicing | C++/Python | Sim-aaS |
-| [UavNetSim](https://github.com/Zihao-Felix-Zhou/UavNetSim-v1) | UAV networks | Python | Trivial |
-
-### 4.4 Open Challenges
-
-- No benchmark covers wireless optimization tasks (power control, beamforming, UAV, spectrum)
-- No benchmark evaluates agent memory or cross-task learning
-- Safety evaluation in network agents is underexplored
-- Standardized agent interface (A2A) adoption is nascent
 
 ---
 
