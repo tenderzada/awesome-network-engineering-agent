@@ -137,11 +137,30 @@ Building agent capability through closed-loop interaction with network simulator
 
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
-| [NetConfEval](https://github.com/NetConfEval/NetConfEval) | CoNEXT 2024 | Benchmark for 4 config tasks, runner-up best paper | [GitHub](https://github.com/NetConfEval/NetConfEval) |
 | [GenOnet](https://github.com/frezazadeh/LangChain-RAG-Technology) | IEEE 6GNet 2024 | Multi-agent NL-to-ns-3 code generation with RAG | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
 | [Generative 6G Sim](https://arxiv.org/abs/2503.13402) | IEEE ICC 2025 | Extended GenOnet for 5G/6G with 5G-LENA validation | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
-| [SIMCODE](https://arxiv.org/abs/2507.11014) | arXiv 2025 | 400-task benchmark for NL to ns-3 code generation | - |
-| [WirelessBench](https://wirelessbench.github.io/) | arXiv 2026 | Tolerance-aware benchmark, 3392 items, 3 cognitive tiers | - |
+| [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 42 typed tools + NS-3 calibrated env + SFT/RL closed-loop training, 8B matches GPT-5 | - |
+
+### 2.4 Task Coverage by Approach
+
+Which network engineering tasks are addressed by each approach?
+
+| Network Task | Data-Driven | Scaffold-Driven | Environment-Driven |
+|-------------|:-----------:|:---------------:|:-----------------:|
+| Routing config (BGP/OSPF) | NetLLM | Confucius, INTA, MNC | GenOnet, 6GAgentGym |
+| Fault diagnosis | BiAn, NetAssistant | MeshAgent | |
+| Network slicing | | WirelessAgent | ORAN-GUIDE, 6GAgentGym |
+| Cross-vendor translation | | INTA, Clarify | |
+| Resource allocation | | WirelessAgent | 6GAgentGym |
+| Beamforming / PHY | | | ComAgent |
+| Network simulation | | | GenOnet, Gen6GSim |
+| Digital twin | | Hermes | |
+| Intent translation | | Intent-LLM, Clarify | |
+| Capacity planning | | MeshAgent | |
+| 5G/6G network analysis | Mobile-LLaMA | | 6GAgentGym |
+| Telecom QA / knowledge | Tele-LLMs, TelecomGPT | | |
+
+**Observation:** Data-Driven approaches focus on domain knowledge acquisition. Scaffold-Driven approaches dominate in routing, fault diagnosis, and intent translation. Environment-Driven approaches are emerging for wireless optimization and simulation, but remain sparse compared to wired network tasks.
 
 ---
 
@@ -208,7 +227,8 @@ Fixed test sets for reproducible evaluation.
 | [NetLLMBench](https://github.com/tum-lkn/netllmbench) | IEEE 2025 | BGP/OSPF/static route config | Fixed configs |
 | [LLM4NetLab](https://github.com/zhihao1998/LLM4NetLab) | SIGCOMM 2025 | Fault diagnosis | Curated incidents |
 | [SIMCODE](https://arxiv.org/abs/2507.11014) | arXiv 2025 | NL to ns-3 code generation | 400 tasks, 3 levels |
-| [NetConfEval](https://dl.acm.org/doi/10.1145/3680121) | CoNEXT 2024 | Network config verification | Fixed test suite |
+| [NetConfEval](https://github.com/NetConfEval/NetConfEval) | CoNEXT 2024 | 4 config tasks, runner-up best paper | [GitHub](https://github.com/NetConfEval/NetConfEval) |
+| [WirelessBench](https://wirelessbench.github.io/) | arXiv 2026 | Tolerance-aware, 3392 items, 3 cognitive tiers | [GitHub](https://github.com/jwentong/WirelessBench) |
 
 ### 4.2 Dynamic Benchmarks
 
@@ -217,6 +237,7 @@ Runtime-generated queries to avoid data contamination.
 | Benchmark | Venue | Tasks | Key Feature |
 |-----------|-------|-------|-------------|
 | [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Route, MALT, K8s | Dynamic query generation, A2A protocol, 3-metric evaluation |
+| [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 6G network management | 42 tools, NS-3 calibrated env, closed-loop RL |
 
 ---
 
