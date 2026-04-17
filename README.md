@@ -67,14 +67,7 @@ Intent (natural language)  +  Network State
 
 ### 1.2 Application Domains
 
-| Domain | Tasks | Example |
-|--------|-------|---------|
-| Routing & Configuration | BGP/OSPF config, static routes, ACL/firewall rules | Configure OSPF so that all subnets can communicate |
-| Resource Allocation | Power control, spectrum management, network slicing | Allocate transmit power to maximize total throughput |
-| UAV & Trajectory Planning | Coverage optimization, relay path planning | Plan UAV trajectory to cover 20 ground users within energy budget |
-| RAN Optimization | Beamforming, handover, scheduling | Design beamforming vectors to maximize SINR |
-| Fault Diagnosis | Root cause analysis, troubleshooting | H1 cannot reach H3, diagnose and fix the routing error |
-| Cloud Native Networking | K8s NetworkPolicy, VNF placement, service function chaining | Isolate namespace-A from namespace-B in Kubernetes |
+Network engineering agent tasks fall into three categories: **Configuration** (translating intent into device-level settings), **Optimization** (tuning resource allocation and physical-layer parameters), and **Operations** (diagnosing faults, generating simulations, and managing knowledge). The detailed task landscape with paper coverage is in [Section 2.4](#24-network-engineering-task-landscape).
 
 ### 1.3 From Traditional Automation to Agentic AI
 
