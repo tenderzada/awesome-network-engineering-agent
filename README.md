@@ -160,6 +160,7 @@ Building agent capability through closed-loop interaction with network simulator
 | [GenOnet](https://github.com/frezazadeh/LangChain-RAG-Technology) | IEEE 6GNet 2024 | Multi-agent NL-to-ns-3 code generation with RAG | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
 | [Generative 6G Sim](https://arxiv.org/abs/2503.13402) | IEEE ICC 2025 | Extended GenOnet for 5G/6G with 5G-LENA validation | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 42 typed tools + NS-3 calibrated env + SFT/RL closed-loop training, 8B matches GPT-5 | - |
+| [AutoRAN](https://ieeexplore.ieee.org/) | IEEE TMC 2025 | Cloud-native + LLM intent parsing for zero-touch Open RAN deployment and testing | - |
 
 ---
 
@@ -188,6 +189,13 @@ Current SOTA methods fall into three paradigms: (1) documentation-guided replay,
 | [MATRIX](https://github.com/facebookresearch/matrix) | ACL 2025 | Multi-agent social simulation for post-training data synthesis | [GitHub](https://github.com/facebookresearch/matrix) |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 6G-Forge: Self-Instruct with execution verification for network tasks | - |
 | [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Dynamic query generation for network benchmarks | [GitHub](https://github.com/Froot-NetSys/NetArena) |
+| [LRAT](https://arxiv.org/abs/2604.04949) | arXiv 2026 | Learning to retrieve from agent trajectories as supervision | - |
+| [DataMind](https://arxiv.org/abs/2509.25084) | arXiv 2025 | Fine-grained task synthesis + knowledge-enhanced trajectory sampling | - |
+| [OpenResearcher](https://arxiv.org/abs/2603.20278) | arXiv 2026 | 97K+ deep research trajectories from offline corpus | - |
+| [ClawBench](https://arxiv.org/abs/2604.08523) | arXiv 2026 | 153 everyday tasks on 144 production websites | - |
+| [MC-Search](https://arxiv.org/abs/2603.00873) | arXiv 2026 | Step-annotated multimodal search benchmark + process alignment | - |
+| [REDSearcher](https://arxiv.org/abs/2602.14234) | arXiv 2026 | Retrieval-enhanced deep search agent | - |
+| [ExpSeek](https://arxiv.org/abs/2601.08605) | arXiv 2026 | Experience-seeking data synthesis for agent training | - |
 
 ### 3.2 Scaling with Scaffold
 
@@ -209,6 +217,8 @@ Current memory architectures are evolving from flat retrieval stores toward stru
 | [TelecomRAG](https://dl.acm.org/doi/10.1145/3656296) | SIGCOMM CCR 2025 | RAG optimized for 3GPP Release 16/18 documents | - |
 | [Telco-RAG](https://github.com/netop-team/Telco-RAG) | Globecom 2024 | Dual-stage RAG with custom telecom glossary | [GitHub](https://github.com/netop-team/Telco-RAG) |
 | [ReLLM](https://arxiv.org/abs/2511.22933) | arXiv 2025 | RAG-empowered LLM for dynamic radio resource management in O-RAN | - |
+| [Omni-SimpleMem](https://arxiv.org/abs/2604.01007) | arXiv 2026 | Simplified unified memory management for LLM agents | - |
+| [A-RAG](https://arxiv.org/abs/2602.03442) | arXiv 2026 | Agentic RAG with adaptive memory | - |
 
 #### 3.2.2 Skills
 
@@ -225,6 +235,17 @@ SOTA methods are graduating from static prompt-based skill collections to RL-evo
 | [SkillWeaver](https://arxiv.org/abs/2504.07079) | arXiv 2025 | Web agents self-discover skills and distill into transferable APIs | - |
 | [Agent Skills Survey](https://arxiv.org/abs/2602.12430) | arXiv 2026 | Comprehensive survey: skill lifecycle from discovery to security | - |
 | [SoK: Agentic Skills](https://arxiv.org/abs/2602.20867) | arXiv 2026 | Systematization of knowledge: skill vs tool distinction | - |
+| [Agentic Proposing](https://arxiv.org/abs/2602.03279) | arXiv 2026 | Compositional skill synthesis for training data generation | - |
+| [AgentSkillOS](https://arxiv.org/abs/2603.02176) | arXiv 2026 | Capability tree + DAG orchestration at 200-200K skill scale | - |
+| [SkillsBench](https://arxiv.org/abs/2602.12670) | arXiv 2026 | Benchmark for evaluating agent skill capabilities | - |
+| [SkillNet](https://arxiv.org/abs/2603.04448) | arXiv 2026 | Network-structured skill organization and composition | - |
+| [Trace2Skill](https://arxiv.org/abs/2603.25158) | arXiv 2026 | Distilling agent trajectories into reusable skills | - |
+| [XSkill](https://arxiv.org/abs/2603.12056) | arXiv 2026 | Continual learning for skill accumulation | - |
+| [PolySkill](https://arxiv.org/abs/2510.15863) | arXiv 2025 | Polymorphic skill representation for diverse tasks | - |
+| [GEMS](https://arxiv.org/abs/2603.28088) | arXiv 2026 | Multimodal agent skill generation and management | - |
+| [SKILL0](https://arxiv.org/abs/2604.02268) | arXiv 2026 | Zero-shot skill acquisition from demonstrations | - |
+| [SkillX](https://arxiv.org/abs/2604.04804) | arXiv 2026 | Cross-domain skill transfer for LLM agents | - |
+| [OmniGAIA](https://arxiv.org/abs/2602.22897) | arXiv 2026 | Self-evolving agent via generative adversarial skill improvement | - |
 
 #### 3.2.3 Tools
 
@@ -267,6 +288,13 @@ Key algorithmic insight: GRPO works for single-turn tasks but fails in long-hori
 | [ORAN-GUIDE](https://arxiv.org/abs/2506.00576) | arXiv 2025 | Dual-LLM + RAG-enhanced multi-agent RL for O-RAN slicing | - |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | SFT + RL closed-loop in network env, 8B matches GPT-5 | - |
 | [Agentic RL Survey](https://arxiv.org/abs/2509.02547) | TMLR 2026 | Comprehensive survey of 500+ works on RL for LLM agents | [List](https://github.com/xhyumiracle/Awesome-AgenticLLM-RL-Papers) |
+| [DGO](https://arxiv.org/abs/2603.24093) | arXiv 2026 | Dual guidance: external experience + internalized knowledge for RL | - |
+| [EAGLET](https://arxiv.org/abs/2510.05608) | arXiv 2025 | Global planner training via consensus filtering + capability-gain reward | - |
+| [RLAnything](https://arxiv.org/abs/2602.02488) | arXiv 2026 | Universal RL framework for arbitrary agent environments | - |
+| [JudgeRLVR](https://arxiv.org/abs/2601.08468) | arXiv 2026 | Judge-based reward verification for agentic RL | - |
+| [GSPO](https://arxiv.org/abs/2507.18071) | arXiv 2025 | Group-step policy optimization for multi-turn agents | - |
+| [ArenaRL](https://arxiv.org/abs/2601.06487) | arXiv 2026 | Arena-based competitive RL for agent self-play | - |
+| [Soft Adaptive PO](https://arxiv.org/abs/2511.20347) | arXiv 2025 | Soft adaptive policy optimization for stable agent training | - |
 
 ---
 
