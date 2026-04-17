@@ -25,7 +25,7 @@ A curated list of papers, benchmarks, and tools for AI agents in network enginee
 - [1. What is a Network Engineering Agent?](#1-what-is-a-network-engineering-agent)
   - [1.1 Definition](#11-definition)
   - [1.2 Network Engineering Task Landscape](#12-network-engineering-task-landscape)
-  - [1.3 From Traditional Automation to Agentic AI](#13-from-traditional-automation-to-agentic-ai)
+  - [1.3 From Manual Configuration to Agentic Network Engineering](#13-from-manual-configuration-to-agentic-network-engineering)
   - [1.4 Comparison with Software Engineering Agent](#14-comparison-with-software-engineering-agent)
 - [2. How to Build?](#2-how-to-build)
   - [2.1 Data-Driven](#21-data-driven)
@@ -97,7 +97,7 @@ Intent (natural language)  +  Network State
 | Telecom knowledge QA | Tele-LLMs, TelecomGPT, Telco-RAG, TelecomRAG, Mobile-LLaMA |
 | K8s / cloud-native networking | NetArena (K8s) |
 
-### 1.3 From Traditional Automation to Agentic AI
+### 1.3 From Manual Configuration to Agentic Network Engineering
 
 | Generation | Approach | Limitation |
 |-----------|----------|------------|
