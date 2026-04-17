@@ -141,26 +141,39 @@ Building agent capability through closed-loop interaction with network simulator
 | [Generative 6G Sim](https://arxiv.org/abs/2503.13402) | IEEE ICC 2025 | Extended GenOnet for 5G/6G with 5G-LENA validation | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 42 typed tools + NS-3 calibrated env + SFT/RL closed-loop training, 8B matches GPT-5 | - |
 
-### 2.4 Task Coverage by Approach
+### 2.4 Network Engineering Task Landscape
 
-Which network engineering tasks are addressed by each approach?
+What tasks are being studied, and by whom?
 
-| Network Task | Data-Driven | Scaffold-Driven | Environment-Driven |
-|-------------|:-----------:|:---------------:|:-----------------:|
-| Routing config (BGP/OSPF) | NetLLM | Confucius, INTA, MNC | GenOnet, 6GAgentGym |
-| Fault diagnosis | BiAn, NetAssistant | MeshAgent | |
-| Network slicing | | WirelessAgent | ORAN-GUIDE, 6GAgentGym |
-| Cross-vendor translation | | INTA, Clarify | |
-| Resource allocation | | WirelessAgent | 6GAgentGym |
-| Beamforming / PHY | | | ComAgent |
-| Network simulation | | | GenOnet, Gen6GSim |
-| Digital twin | | Hermes | |
-| Intent translation | | Intent-LLM, Clarify | |
-| Capacity planning | | MeshAgent | |
-| 5G/6G network analysis | Mobile-LLaMA | | 6GAgentGym |
-| Telecom QA / knowledge | Tele-LLMs, TelecomGPT | | |
+#### Network Configuration
 
-**Observation:** Data-Driven approaches focus on domain knowledge acquisition. Scaffold-Driven approaches dominate in routing, fault diagnosis, and intent translation. Environment-Driven approaches are emerging for wireless optimization and simulation, but remain sparse compared to wired network tasks.
+| Task | Papers |
+|------|--------|
+| Routing config (BGP/OSPF/static) | NetLLM, Confucius, INTA, MNC, NetLLMBench, NetArena, 6GAgentGym |
+| Cross-vendor config translation | INTA, Clarify |
+| Intent-to-config translation | Intent-LLM, Clarify, NetConfEval |
+| ACL / firewall policy | Clarify, NetConfEval |
+| Network slicing config | WirelessAgent, ORAN-GUIDE, ReLLM, 6GAgentGym |
+
+#### Network Optimization
+
+| Task | Papers |
+|------|--------|
+| Resource allocation | WirelessAgent, ReLLM, 6GAgentGym, WirelessBench |
+| Beamforming / PHY optimization | ComAgent, LAM4PHY_6G, WirelessBench |
+| Capacity planning | MeshAgent, NetArena (MALT) |
+| Spectrum management | BLAST |
+| Energy efficiency | Intent-LLM |
+
+#### Network Operations
+
+| Task | Papers |
+|------|--------|
+| Fault diagnosis / troubleshooting | BiAn, NetAssistant, MeshAgent, LLM4NetLab, NetArena (Route) |
+| Network simulation code generation | GenOnet, Generative 6G Sim, SIMCODE |
+| Digital twin construction | Hermes |
+| Telecom knowledge QA | Tele-LLMs, TelecomGPT, Telco-RAG, TelecomRAG, Mobile-LLaMA |
+| K8s / cloud-native networking | NetArena (K8s) |
 
 ---
 
