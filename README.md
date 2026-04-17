@@ -24,7 +24,7 @@ A curated list of papers, benchmarks, and tools for AI agents in network enginee
 
 - [1. What is a Network Engineering Agent?](#1-what-is-a-network-engineering-agent)
   - [1.1 Definition](#11-definition)
-  - [1.2 Application Domains](#12-application-domains)
+  - [1.2 Network Engineering Task Landscape](#12-network-engineering-task-landscape)
   - [1.3 From Traditional Automation to Agentic AI](#13-from-traditional-automation-to-agentic-ai)
   - [1.4 Comparison with Software Engineering Agent](#14-comparison-with-software-engineering-agent)
 - [2. How to Build?](#2-how-to-build)
@@ -65,9 +65,37 @@ Intent (natural language)  +  Network State
         Verify: correctness + safety + performance
 ```
 
-### 1.2 Application Domains
+### 1.2 Network Engineering Task Landscape
 
-Network engineering agent tasks fall into three categories: **Configuration** (translating intent into device-level settings), **Optimization** (tuning resource allocation and physical-layer parameters), and **Operations** (diagnosing faults, generating simulations, and managing knowledge). The detailed task landscape with paper coverage is in [Section 2.4](#24-network-engineering-task-landscape).
+#### Network Configuration
+
+| Task | Papers |
+|------|--------|
+| Routing config (BGP/OSPF/static) | NetLLM, Confucius, INTA, MNC, NetLLMBench, NetArena, 6GAgentGym |
+| Cross-vendor config translation | INTA, Clarify |
+| Intent-to-config translation | Intent-LLM, Clarify, NetConfEval |
+| ACL / firewall policy | Clarify, NetConfEval |
+| Network slicing config | WirelessAgent, ORAN-GUIDE, ReLLM, 6GAgentGym |
+
+#### Network Optimization
+
+| Task | Papers |
+|------|--------|
+| Resource allocation | WirelessAgent, ReLLM, 6GAgentGym, WirelessBench |
+| Beamforming / PHY optimization | ComAgent, LAM4PHY_6G, WirelessBench |
+| Capacity planning | MeshAgent, NetArena (MALT) |
+| Spectrum management | BLAST |
+| Energy efficiency | Intent-LLM |
+
+#### Network Operations
+
+| Task | Papers |
+|------|--------|
+| Fault diagnosis / troubleshooting | BiAn, NetAssistant, MeshAgent, LLM4NetLab, NetArena (Route) |
+| Network simulation code generation | GenOnet, Generative 6G Sim, SIMCODE |
+| Digital twin construction | Hermes |
+| Telecom knowledge QA | Tele-LLMs, TelecomGPT, Telco-RAG, TelecomRAG, Mobile-LLaMA |
+| K8s / cloud-native networking | NetArena (K8s) |
 
 ### 1.3 From Traditional Automation to Agentic AI
 
@@ -133,40 +161,6 @@ Building agent capability through closed-loop interaction with network simulator
 | [GenOnet](https://github.com/frezazadeh/LangChain-RAG-Technology) | IEEE 6GNet 2024 | Multi-agent NL-to-ns-3 code generation with RAG | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
 | [Generative 6G Sim](https://arxiv.org/abs/2503.13402) | IEEE ICC 2025 | Extended GenOnet for 5G/6G with 5G-LENA validation | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 42 typed tools + NS-3 calibrated env + SFT/RL closed-loop training, 8B matches GPT-5 | - |
-
-### 2.4 Network Engineering Task Landscape
-
-What tasks are being studied, and by whom?
-
-#### Network Configuration
-
-| Task | Papers |
-|------|--------|
-| Routing config (BGP/OSPF/static) | NetLLM, Confucius, INTA, MNC, NetLLMBench, NetArena, 6GAgentGym |
-| Cross-vendor config translation | INTA, Clarify |
-| Intent-to-config translation | Intent-LLM, Clarify, NetConfEval |
-| ACL / firewall policy | Clarify, NetConfEval |
-| Network slicing config | WirelessAgent, ORAN-GUIDE, ReLLM, 6GAgentGym |
-
-#### Network Optimization
-
-| Task | Papers |
-|------|--------|
-| Resource allocation | WirelessAgent, ReLLM, 6GAgentGym, WirelessBench |
-| Beamforming / PHY optimization | ComAgent, LAM4PHY_6G, WirelessBench |
-| Capacity planning | MeshAgent, NetArena (MALT) |
-| Spectrum management | BLAST |
-| Energy efficiency | Intent-LLM |
-
-#### Network Operations
-
-| Task | Papers |
-|------|--------|
-| Fault diagnosis / troubleshooting | BiAn, NetAssistant, MeshAgent, LLM4NetLab, NetArena (Route) |
-| Network simulation code generation | GenOnet, Generative 6G Sim, SIMCODE |
-| Digital twin construction | Hermes |
-| Telecom knowledge QA | Tele-LLMs, TelecomGPT, Telco-RAG, TelecomRAG, Mobile-LLaMA |
-| K8s / cloud-native networking | NetArena (K8s) |
 
 ---
 
