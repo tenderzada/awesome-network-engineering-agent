@@ -32,10 +32,9 @@ A curated list of papers, benchmarks, and tools for AI agents in network enginee
   - [2.2 Scaffold-Driven](#22-scaffold-driven)
   - [2.3 Environment-Driven](#23-environment-driven)
 - [3. How to Scale?](#3-how-to-scale)
-  - [3.1 Scaling with RL](#31-scaling-with-rl)
-  - [3.2 Scaling with Tools](#32-scaling-with-tools)
-  - [3.3 Scaling with Skills](#33-scaling-with-skills)
-  - [3.4 Scaling with Memory](#34-scaling-with-memory)
+  - [3.1 Scaling with Data Synthesis](#31-scaling-with-data-synthesis)
+  - [3.2 Scaling with Scaffold](#32-scaling-with-scaffold)
+  - [3.3 Scaling with Agentic RL](#33-scaling-with-agentic-rl)
 - [4. How to Evaluate?](#4-how-to-evaluate)
   - [4.1 Static Benchmarks](#41-static-benchmarks)
   - [4.2 Dynamic Benchmarks](#42-dynamic-benchmarks)
@@ -166,33 +165,32 @@ Building agent capability through closed-loop interaction with network simulator
 
 ## 3. How to Scale?
 
-### 3.1 Scaling with RL
+Ch3 aligns with Ch2: scaling **data** for Data-Driven, scaling **scaffold** for Scaffold-Driven, and scaling **interaction** for Environment-Driven.
 
-Reinforcement learning in network environments to improve agent policies.
+### 3.1 Scaling with Data Synthesis
 
-| Paper | Venue | Method | Code |
-|-------|-------|--------|------|
-| [Agent-R1](https://github.com/0russwest0/Agent-R1) | arXiv 2025 | End-to-end RL (PPO/GRPO) for multi-turn tool-calling agents | [GitHub](https://github.com/0russwest0/Agent-R1) |
-| [AgentGym-RL](https://github.com/WooooDyy/AgentGym-RL) | arXiv 2025 | Staged RL training across diverse environments | [GitHub](https://github.com/WooooDyy/AgentGym-RL) |
-| [ComAgent](https://github.com/jiangfeibo/ComAgent) | arXiv 2026 | Multi-LLM agentic framework with closed-loop for beamforming | [GitHub](https://github.com/jiangfeibo/ComAgent) |
-| [ORAN-GUIDE](https://arxiv.org/abs/2506.00576) | arXiv 2025 | Dual-LLM + RAG-enhanced multi-agent RL for O-RAN slicing | - |
-| [LLM-xApp](https://arxiv.org/abs/2501.08760) | NDSS FutureG 2025 | LLM-powered xApp for adaptive radio resource management | - |
-
-### 3.2 Scaling with Tools
-
-Expanding agent capabilities through external tools and APIs.
+Generating more and better training data to scale Data-Driven approaches.
 
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
-| [Confucius](https://dl.acm.org/doi/10.1145/3718958.3750537) | SIGCOMM 2025 | 60+ network management tools integrated via multi-agent LLM | - |
-| [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1) | arXiv 2024 | Four-module cognitive architecture with external knowledge base | [GitHub](https://github.com/jwentong/WirelessAgent_R1) |
-| [BLAST](https://arxiv.org/abs/2604.12127) | arXiv 2026 | LLM agents + blockchain for autonomous spectrum trading | - |
-| [LAM4PHY_6G](https://github.com/AI4Wireless/LAM4PHY_6G) | Various IEEE 2024-25 | GPT-2 adapted for CSI feedback, beam prediction, multi-task PHY | [GitHub](https://github.com/AI4Wireless/LAM4PHY_6G) |
-| [Intent-LLM](https://ieeexplore.ieee.org/document/11169296/) | IEEE TCCN 2025 | API-defined action space constraining agent to valid operations | - |
+| [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 6G-Forge: iterative Self-Instruct with execution verification for network trajectories | - |
+| [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Dynamic query generation producing unlimited benchmark queries at runtime | [GitHub](https://github.com/Froot-NetSys/NetArena) |
 
-### 3.3 Scaling with Skills
+### 3.2 Scaling with Scaffold
 
-Accumulating reusable operation skills across tasks.
+Enriching agent frameworks with memory, skills, and tools to scale Scaffold-Driven approaches.
+
+#### 3.2.1 Memory
+
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [A-MEM](https://github.com/agiresearch/A-mem) | NeurIPS 2025 | Zettelkasten-style self-organizing memory with dynamic indexing | [GitHub](https://github.com/agiresearch/A-mem) |
+| [TelecomRAG](https://dl.acm.org/doi/10.1145/3656296) | SIGCOMM CCR 2025 | RAG framework optimized for 3GPP Release 16/18 documents | - |
+| [Telco-RAG](https://github.com/netop-team/Telco-RAG) | arXiv 2024 | Dual-stage RAG with custom telecom glossary for 3GPP | [GitHub](https://github.com/netop-team/Telco-RAG) |
+| [ReLLM](https://arxiv.org/abs/2511.22933) | arXiv 2025 | RAG-empowered LLM for dynamic radio resource management in O-RAN | - |
+| [EvolveR](https://arxiv.org/abs/2510.16079) | arXiv 2025 | Self-evolving agents via offline self-distillation of experience | - |
+
+#### 3.2.2 Skills
 
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
@@ -202,17 +200,28 @@ Accumulating reusable operation skills across tasks.
 | [PAE](https://yanqval.github.io/PAE/) | arXiv 2024 | Autonomous skill discovery with VLM-based success evaluation as reward | [GitHub](https://yanqval.github.io/PAE/) |
 | [SkillWeaver](https://arxiv.org/abs/2504.07079) | arXiv 2025 | Web agents self-discover and synthesize reusable skill APIs | - |
 
-### 3.4 Scaling with Memory
-
-Enabling agents to accumulate and reuse experience across tasks.
+#### 3.2.3 Tools
 
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
-| [A-MEM](https://github.com/agiresearch/A-mem) | NeurIPS 2025 | Zettelkasten-style self-organizing memory with dynamic indexing | [GitHub](https://github.com/agiresearch/A-mem) |
-| [TelecomRAG](https://dl.acm.org/doi/10.1145/3656296) | SIGCOMM CCR 2025 | RAG framework optimized for 3GPP Release 16/18 documents | - |
-| [Telco-RAG](https://github.com/netop-team/Telco-RAG) | arXiv 2024 | Dual-stage RAG with custom telecom glossary for 3GPP | [GitHub](https://github.com/netop-team/Telco-RAG) |
-| [ReLLM](https://arxiv.org/abs/2511.22933) | arXiv 2025 | RAG-empowered LLM for dynamic radio resource management in O-RAN | - |
-| [EvolveR](https://arxiv.org/abs/2510.16079) | arXiv 2025 | Self-evolving agents via offline self-distillation of experience | - |
+| [Confucius](https://dl.acm.org/doi/10.1145/3718958.3750537) | SIGCOMM 2025 | 60+ network management tools integrated via multi-agent LLM | - |
+| [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1) | arXiv 2024 | Four-module cognitive architecture with external knowledge base | [GitHub](https://github.com/jwentong/WirelessAgent_R1) |
+| [BLAST](https://arxiv.org/abs/2604.12127) | arXiv 2026 | LLM agents + blockchain for autonomous spectrum trading | - |
+| [LAM4PHY_6G](https://github.com/AI4Wireless/LAM4PHY_6G) | Various IEEE 2024-25 | GPT-2 adapted for CSI feedback, beam prediction, multi-task PHY | [GitHub](https://github.com/AI4Wireless/LAM4PHY_6G) |
+| [Intent-LLM](https://ieeexplore.ieee.org/document/11169296/) | IEEE TCCN 2025 | API-defined action space constraining agent to valid operations | - |
+
+### 3.3 Scaling with Agentic RL
+
+Scaling Environment-Driven approaches through reinforcement learning in network environments.
+
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [Agent-R1](https://github.com/0russwest0/Agent-R1) | arXiv 2025 | End-to-end RL (PPO/GRPO) for multi-turn tool-calling agents | [GitHub](https://github.com/0russwest0/Agent-R1) |
+| [AgentGym-RL](https://github.com/WooooDyy/AgentGym-RL) | arXiv 2025 | Staged RL training across diverse environments | [GitHub](https://github.com/WooooDyy/AgentGym-RL) |
+| [ComAgent](https://github.com/jiangfeibo/ComAgent) | arXiv 2026 | Multi-LLM agentic framework with closed-loop for beamforming | [GitHub](https://github.com/jiangfeibo/ComAgent) |
+| [ORAN-GUIDE](https://arxiv.org/abs/2506.00576) | arXiv 2025 | Dual-LLM + RAG-enhanced multi-agent RL for O-RAN slicing | - |
+| [LLM-xApp](https://arxiv.org/abs/2501.08760) | NDSS FutureG 2025 | LLM-powered xApp for adaptive radio resource management | - |
+| [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | SFT + RL closed-loop training in network env, 8B matches GPT-5 | - |
 
 ---
 
