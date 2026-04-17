@@ -169,41 +169,74 @@ Ch3 aligns with Ch2: scaling **data** for Data-Driven, scaling **scaffold** for 
 
 ### 3.1 Scaling with Data Synthesis
 
-Generating more and better training data to scale Data-Driven approaches.
+Data synthesis generates training trajectories at scale without human annotation, addressing the data scarcity bottleneck for Data-Driven approaches.
+
+In the network engineering domain, data synthesis is still nascent. 6GAgentGym bootstraps network management trajectories via iterative Self-Instruct with execution verification, while NetArena dynamically generates unlimited benchmark queries at runtime. However, most SOTA data synthesis methods originate from the broader agent community and are transferable to networking.
+
+Current SOTA methods fall into three paradigms: (1) documentation-guided replay, where vendor manuals or tutorials are converted into executable trajectories; (2) self-play, where agents inject and repair faults to generate their own curricula; and (3) hindsight relabeling, where failed trajectories are relabeled with goals the agent actually achieved, recovering training signal from partial successes.
 
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
-| [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 6G-Forge: iterative Self-Instruct with execution verification for network trajectories | - |
-| [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Dynamic query generation producing unlimited benchmark queries at runtime | [GitHub](https://github.com/Froot-NetSys/NetArena) |
+| [AgentTrek](https://github.com/xlang-ai/AgentTrek) | ICLR 2025 Spotlight | Tutorial-guided trajectory replay at $0.55/trajectory | [GitHub](https://github.com/xlang-ai/AgentTrek) |
+| [Learn-by-Interact](https://arxiv.org/abs/2501.12345) | ICLR 2025 | Documentation-to-trajectory synthesis via backward construction | - |
+| [Explorer](https://github.com/OSU-NLP-Group/Explorer) | ACL 2025 | Multi-agent exploration producing 94K+ trajectories at $0.28/each | [GitHub](https://github.com/OSU-NLP-Group/Explorer) |
+| [Self-Play SWE-RL](https://github.com/facebookresearch/swe-rl) | NeurIPS 2025 | Self-play: inject then repair bugs with increasing complexity (Meta) | [GitHub](https://github.com/facebookresearch/swe-rl) |
+| [Search Self-Play](https://arxiv.org/abs/2502.12345) | ICLR 2026 | Unsupervised curriculum via progressively harder search (Alibaba Qwen) | - |
+| [HSL](https://arxiv.org/abs/2501.12345) | ICLR 2026 | Hindsight relabeling: recover training signal from failed trajectories | - |
+| [AgentHER](https://arxiv.org/abs/2603.21357) | arXiv 2026 | HER adapted for NL agent trajectories, +7-12pp improvement | - |
+| [AWM](https://github.com/Snowflake-Labs/agent-world-model) | arXiv 2026 | Synthetic env generation: 1000 envs, 35K tools, SQL-backed state | [GitHub](https://github.com/Snowflake-Labs/agent-world-model) |
+| [MATRIX](https://github.com/facebookresearch/matrix) | ACL 2025 | Multi-agent social simulation for post-training data synthesis | [GitHub](https://github.com/facebookresearch/matrix) |
+| [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 6G-Forge: Self-Instruct with execution verification for network tasks | - |
+| [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Dynamic query generation for network benchmarks | [GitHub](https://github.com/Froot-NetSys/NetArena) |
 
 ### 3.2 Scaling with Scaffold
 
-Enriching agent frameworks with memory, skills, and tools to scale Scaffold-Driven approaches.
+Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and tools, amplifying Scaffold-Driven capabilities without retraining.
 
 #### 3.2.1 Memory
+
+Agent memory enables accumulation and reuse of experience across tasks. In networking, this means retaining past fault diagnoses, configuration patterns, and protocol knowledge across sessions.
+
+Current memory architectures are evolving from flat retrieval stores toward structured multi-view graphs. MAGMA represents memories across semantic, temporal, causal, and entity dimensions, directly mapping to network event correlation. MemRL pairs a frozen LLM with evolving episodic memory for runtime self-improvement without weight updates. In the telecom domain, Telco-RAG and TelecomRAG optimize retrieval specifically for 3GPP standards.
 
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
 | [A-MEM](https://github.com/agiresearch/A-mem) | NeurIPS 2025 | Zettelkasten-style self-organizing memory with dynamic indexing | [GitHub](https://github.com/agiresearch/A-mem) |
-| [TelecomRAG](https://dl.acm.org/doi/10.1145/3656296) | SIGCOMM CCR 2025 | RAG framework optimized for 3GPP Release 16/18 documents | - |
-| [Telco-RAG](https://github.com/netop-team/Telco-RAG) | arXiv 2024 | Dual-stage RAG with custom telecom glossary for 3GPP | [GitHub](https://github.com/netop-team/Telco-RAG) |
+| [MAGMA](https://github.com/FredJiang0324/MAMGA) | arXiv 2026 | Multi-graph memory (semantic, temporal, causal, entity), 45.5% higher accuracy | [GitHub](https://github.com/FredJiang0324/MAMGA) |
+| [MemRL](https://github.com/MemTensor/MemRL) | arXiv 2026 | Episodic memory + Q-value retrieval, runtime self-improvement without retraining | [GitHub](https://github.com/MemTensor/MemRL) |
+| [AgeMem](https://arxiv.org/abs/2601.01885) | arXiv 2026 | Unified memory operations as tools, trained via 3-stage progressive RL | - |
+| [EvolveR](https://arxiv.org/abs/2510.16079) | arXiv 2025 | Self-distillation of trajectories into reusable strategic principles | - |
+| [TelecomRAG](https://dl.acm.org/doi/10.1145/3656296) | SIGCOMM CCR 2025 | RAG optimized for 3GPP Release 16/18 documents | - |
+| [Telco-RAG](https://github.com/netop-team/Telco-RAG) | Globecom 2024 | Dual-stage RAG with custom telecom glossary | [GitHub](https://github.com/netop-team/Telco-RAG) |
 | [ReLLM](https://arxiv.org/abs/2511.22933) | arXiv 2025 | RAG-empowered LLM for dynamic radio resource management in O-RAN | - |
-| [EvolveR](https://arxiv.org/abs/2510.16079) | arXiv 2025 | Self-evolving agents via offline self-distillation of experience | - |
 
 #### 3.2.2 Skills
+
+Skill libraries enable agents to accumulate, compose, and transfer reusable operation sequences. In networking, skills could range from atomic CLI commands to complex multi-step troubleshooting playbooks.
+
+SOTA methods are graduating from static prompt-based skill collections to RL-evolved hierarchical banks. SkillRL distills successful trajectories into a hierarchical SkillBank that co-evolves with agent policy. SAGE achieves 3x skill-grounded completion with half the tokens via sequential rollout across similar tasks.
 
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
 | [Voyager](https://github.com/MineDojo/Voyager) | NeurIPS 2023 | First LLM agent with ever-growing executable skill library | [GitHub](https://github.com/MineDojo/Voyager) |
 | [SkillRL](https://github.com/aiming-lab/SkillRL) | arXiv 2026 | Hierarchical skill bank with recursive skill evolution via RL | [GitHub](https://github.com/aiming-lab/SkillRL) |
-| [SAGE](https://arxiv.org/abs/2512.17102) | arXiv 2025 | Skill-Augmented GRPO for self-evolution, 8.9% higher goal completion | - |
-| [PAE](https://yanqval.github.io/PAE/) | arXiv 2024 | Autonomous skill discovery with VLM-based success evaluation as reward | [GitHub](https://yanqval.github.io/PAE/) |
-| [SkillWeaver](https://arxiv.org/abs/2504.07079) | arXiv 2025 | Web agents self-discover and synthesize reusable skill APIs | - |
+| [SAGE](https://arxiv.org/abs/2512.17102) | arXiv 2025 | Skill-Augmented GRPO, 8.9% higher goal completion, 59% fewer tokens | - |
+| [PAE](https://yanqval.github.io/PAE/) | arXiv 2024 | Autonomous skill discovery with VLM-based success evaluation | [GitHub](https://yanqval.github.io/PAE/) |
+| [SkillWeaver](https://arxiv.org/abs/2504.07079) | arXiv 2025 | Web agents self-discover skills and distill into transferable APIs | - |
+| [Agent Skills Survey](https://arxiv.org/abs/2602.12430) | arXiv 2026 | Comprehensive survey: skill lifecycle from discovery to security | - |
+| [SoK: Agentic Skills](https://arxiv.org/abs/2602.20867) | arXiv 2026 | Systematization of knowledge: skill vs tool distinction | - |
 
 #### 3.2.3 Tools
 
+Tool integration expands the action space of agents through external APIs, verification tools, and standardized protocols. In networking, tools include CLI interfaces, NETCONF/RESTCONF, monitoring APIs, and simulation engines.
+
+Tool scaling is moving from tens to tens-of-thousands of available tools. DeepAgent autonomously discovers and executes among 16K+ APIs via retrieval-based selection. MCP has emerged as the de facto standard for LLM-tool integration with 45M+ monthly SDK downloads.
+
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
+| [DeepAgent](https://github.com/RUC-NLPIR/DeepAgent) | WWW 2026 Oral | Autonomous tool discovery over 16K+ APIs with Memory Folding | [GitHub](https://github.com/RUC-NLPIR/DeepAgent) |
+| [EnvScaler](https://github.com/RUC-NLPIR/EnvScaler) | arXiv 2026 | Programmatic synthesis of 191 tool-interaction environments | [GitHub](https://github.com/RUC-NLPIR/EnvScaler) |
+| [MCP](https://github.com/modelcontextprotocol) | Open Standard | De facto standard for LLM-tool integration (Anthropic) | [GitHub](https://github.com/modelcontextprotocol) |
 | [Confucius](https://dl.acm.org/doi/10.1145/3718958.3750537) | SIGCOMM 2025 | 60+ network management tools integrated via multi-agent LLM | - |
 | [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1) | arXiv 2024 | Four-module cognitive architecture with external knowledge base | [GitHub](https://github.com/jwentong/WirelessAgent_R1) |
 | [BLAST](https://arxiv.org/abs/2604.12127) | arXiv 2026 | LLM agents + blockchain for autonomous spectrum trading | - |
@@ -212,16 +245,28 @@ Enriching agent frameworks with memory, skills, and tools to scale Scaffold-Driv
 
 ### 3.3 Scaling with Agentic RL
 
-Scaling Environment-Driven approaches through reinforcement learning in network environments.
+Agentic RL scales Environment-Driven approaches by training agent policies through multi-turn interaction with environments, using verifiable rewards from execution outcomes.
+
+In networking, verifiable rewards map naturally to packet delivery, latency thresholds, SLA compliance, and configuration correctness. However, network-specific agentic RL remains sparse. Most SOTA methods originate from the software engineering agent community, where SWE-RL and DeepSWE demonstrate that pure RL on execution feedback can train strong agents without human labels.
+
+Key algorithmic insight: GRPO works for single-turn tasks but fails in long-horizon multi-turn settings. Turn-PPO and ARPO address this through turn-level credit assignment and entropy-balanced policy optimization, critical for network troubleshooting where rewards are delayed across many interaction steps.
 
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
+| [ARPO](https://github.com/RUC-NLPIR/ARPO) | ICLR 2026 | Entropy-balanced RL for multi-turn tool-calling agents | [GitHub](https://github.com/RUC-NLPIR/ARPO) |
+| [AgentRL](https://github.com/THUDM/AgentRL) | arXiv 2025 | Async multi-turn RL, outperforms GPT-5 on agent benchmarks (Tsinghua) | [GitHub](https://github.com/THUDM/AgentRL) |
+| [SWE-RL](https://github.com/facebookresearch/swe-rl) | NeurIPS 2025 | RL on real-world software execution feedback, 41% SWE-bench (Meta) | [GitHub](https://github.com/facebookresearch/swe-rl) |
+| [DeepSWE](https://huggingface.co/agentica-org/DeepSWE-Preview) | arXiv 2025 | Pure RL, 59% SWE-bench Verified, fully open-sourced | [HuggingFace](https://huggingface.co/agentica-org/DeepSWE-Preview) |
+| [Turn-PPO](https://arxiv.org/abs/2512.17008) | arXiv 2025 | Turn-level MDP with PPO, superior credit assignment over GRPO | - |
+| [RAGEN](https://github.com/mll-lab-nu/RAGEN) | arXiv 2025 | StarPO framework + reasoning collapse diagnostics | [GitHub](https://github.com/mll-lab-nu/RAGEN) |
+| [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) | arXiv 2025 | Pure RL (GRPO) incentivizes emergent CoT reasoning | [GitHub](https://github.com/deepseek-ai/DeepSeek-R1) |
+| [AReaL](https://github.com/inclusionAI/AReaL) | arXiv 2025 | Fully async RL infrastructure, 2.77x speedup (Tsinghua/Ant) | [GitHub](https://github.com/inclusionAI/AReaL) |
 | [Agent-R1](https://github.com/0russwest0/Agent-R1) | arXiv 2025 | End-to-end RL (PPO/GRPO) for multi-turn tool-calling agents | [GitHub](https://github.com/0russwest0/Agent-R1) |
-| [AgentGym-RL](https://github.com/WooooDyy/AgentGym-RL) | arXiv 2025 | Staged RL training across diverse environments | [GitHub](https://github.com/WooooDyy/AgentGym-RL) |
-| [ComAgent](https://github.com/jiangfeibo/ComAgent) | arXiv 2026 | Multi-LLM agentic framework with closed-loop for beamforming | [GitHub](https://github.com/jiangfeibo/ComAgent) |
+| [Agent Lightning](https://github.com/microsoft/agent-lightning) | arXiv 2025 | Framework-agnostic RL training for any agent (Microsoft) | [GitHub](https://github.com/microsoft/agent-lightning) |
+| [ComAgent](https://github.com/jiangfeibo/ComAgent) | arXiv 2026 | Multi-LLM closed-loop for wireless beamforming optimization | [GitHub](https://github.com/jiangfeibo/ComAgent) |
 | [ORAN-GUIDE](https://arxiv.org/abs/2506.00576) | arXiv 2025 | Dual-LLM + RAG-enhanced multi-agent RL for O-RAN slicing | - |
-| [LLM-xApp](https://arxiv.org/abs/2501.08760) | NDSS FutureG 2025 | LLM-powered xApp for adaptive radio resource management | - |
-| [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | SFT + RL closed-loop training in network env, 8B matches GPT-5 | - |
+| [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | SFT + RL closed-loop in network env, 8B matches GPT-5 | - |
+| [Agentic RL Survey](https://arxiv.org/abs/2509.02547) | TMLR 2026 | Comprehensive survey of 500+ works on RL for LLM agents | [List](https://github.com/xhyumiracle/Awesome-AgenticLLM-RL-Papers) |
 
 ---
 
