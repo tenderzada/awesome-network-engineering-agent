@@ -29,7 +29,7 @@ A curated list of papers, benchmarks, and tools for AI agents in network enginee
   - [1.4 Comparison with Software Engineering Agent](#14-comparison-with-software-engineering-agent)
 - [2. How to Build?](#2-how-to-build)
   - [2.1 Data-Driven](#21-data-driven)
-  - [2.2 Model-Driven](#22-model-driven)
+  - [2.2 Scaffold-Driven](#22-scaffold-driven)
   - [2.3 Environment-Driven](#23-environment-driven)
 - [3. How to Scale?](#3-how-to-scale)
   - [3.1 Scaling with RL](#31-scaling-with-rl)
@@ -101,36 +101,47 @@ Intent (natural language)  +  Network State
 
 ## 2. How to Build?
 
+The three approaches are distinguished by where the agent's capability comes from: **from data** (model weights are changed), **from scaffolding** (model weights are frozen, capability comes from framework design), or **from environment interaction** (capability comes from closed-loop feedback).
+
 ### 2.1 Data-Driven
 
-Training or fine-tuning agents on network-domain data.
+Building domain capability through pretraining, fine-tuning, or distillation. Model weights are modified.
 
-| Approach | Description | Papers |
-|----------|-------------|--------|
-| SFT on network data | Fine-tune LLM on network config/troubleshooting data | Mobile-LLaMA |
-| Data synthesis | Generate training data from simulators or templates | NetArena dynamic query generation |
-| Distillation | Distill large model network knowledge to smaller models | LLM for Telecom survey (IEEE COMST 2025) |
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [NetLLM](https://github.com/duowuyms/NetLLM) | SIGCOMM 2024 | LoRA fine-tuning LLaMA-2 for networking tasks (viewport, ABR, scheduling) | [GitHub](https://github.com/duowuyms/NetLLM) |
+| [Tele-LLMs](https://github.com/Ali-maatouk/Tele-LLMs) | arXiv 2024 | 1B-8B LLMs continually pretrained on 3GPP/arXiv telecom data | [GitHub](https://github.com/Ali-maatouk/Tele-LLMs) |
+| [Mobile-LLaMA](https://github.com/DNLab2024/Mobile-LLaMA) | IEEE Network 2024 | Instruction fine-tuned LLaMA-2 13B for 5G network analysis | [GitHub](https://github.com/DNLab2024/Mobile-LLaMA) |
+| TelecomGPT | arXiv 2024 | Continual pretraining + SFT + RLHF on OpenTelecom dataset | - |
+| [BiAn](https://dl.acm.org/doi/10.1145/3718958.3750505) | SIGCOMM 2025 | LLM-based failure localization, 95.5% accuracy at Alibaba Cloud | - |
+| [NetAssistant](https://www.usenix.org/conference/nsdi24/presentation/wang-haopei) | NSDI 2024 | Dialogue-based network diagnosis deployed at ByteDance 3+ years | - |
 
-### 2.2 Model-Driven
+### 2.2 Scaffold-Driven
 
-Leveraging LLM capabilities through prompting and agent framework design.
+Building agent capability through framework design on top of frozen models. Capability comes from prompting, tool integration, multi-agent orchestration, and code generation.
 
-| Approach | Description | Papers |
-|----------|-------------|--------|
-| Prompt engineering | Zero-shot, CoT, few-shot for network tasks | Intent-LLM (IEEE TCCN 2025) |
-| ReAct / tool-use | Agent reasons and calls network APIs iteratively | MeshAgent (SIGMETRICS 2026) |
-| Multi-agent | Multiple specialized agents collaborate on network tasks | Confucius (SIGCOMM 2025), Multi-Agent ns-3 |
-| Code generation | LLM generates executable network config/simulation code | SIMCODE, NetConfEval |
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [Confucius](https://dl.acm.org/doi/10.1145/3718958.3750537) | SIGCOMM 2025 | Multi-agent LLM + DAG planning + RAG, deployed at Meta | - |
+| [MeshAgent](https://zaoxing.github.io/papers/2026/SIGMETRICS26_MeshAgent.pdf) | SIGMETRICS 2026 | Constraint-guided generation with domain-specific invariants | - |
+| [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1) | arXiv 2024 | Perception-memory-planning-action framework for wireless tasks | [GitHub](https://github.com/jwentong/WirelessAgent_R1) |
+| [INTA](https://arxiv.org/abs/2501.08760) | IEEE ICNP 2025 | Intent-based RAG for cross-vendor config translation, 98.15% syntactic correctness | - |
+| [Clarify](https://conferences.sigcomm.org/hotnets/2025/papers/hotnets25-final189.pdf) | HotNets 2025 | Interactive disambiguation for ACL/route-map synthesis | - |
+| [MNC](https://www.sciencedirect.com/science/article/pii/S2667305325000572) | Elsevier 2025 | Three-module multi-agent with CoT and reflection | - |
+| [Hermes](https://arxiv.org/abs/2411.06490) | arXiv 2024 | Digital twin + multi-model orchestration for autonomous networks | - |
+| [Intent-LLM](https://ieeexplore.ieee.org/document/11169296/) | IEEE TCCN 2025 | Structured 4-round prompting + API-defined action space (VipeeGPT) | - |
 
 ### 2.3 Environment-Driven
 
-Building agents that interact with realistic network environments.
+Building agent capability through closed-loop interaction with network simulators, emulators, or digital twins. Capability comes from environmental feedback and iterative refinement.
 
-| Approach | Description | Papers |
-|----------|-------------|--------|
-| Simulator-in-the-loop | Agent operates inside Mininet/Containerlab/ns-3 | NetArena, NetLLMBench |
-| Digital twin | Agent interacts with a digital replica of production network | (emerging) |
-| Closed-loop verification | Agent action is executed and verified before deployment | NetArena (correctness + safety metrics) |
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [NetConfEval](https://github.com/NetConfEval/NetConfEval) | CoNEXT 2024 | Benchmark for 4 config tasks, runner-up best paper | [GitHub](https://github.com/NetConfEval/NetConfEval) |
+| [GenOnet](https://github.com/frezazadeh/LangChain-RAG-Technology) | IEEE 6GNet 2024 | Multi-agent NL-to-ns-3 code generation with RAG | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
+| [Generative 6G Sim](https://arxiv.org/abs/2503.13402) | IEEE ICC 2025 | Extended GenOnet for 5G/6G with 5G-LENA validation | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
+| [SIMCODE](https://arxiv.org/abs/2507.11014) | arXiv 2025 | 400-task benchmark for NL to ns-3 code generation | - |
+| [WirelessBench](https://wirelessbench.github.io/) | arXiv 2026 | Tolerance-aware benchmark, 3392 items, 3 cognitive tiers | - |
 
 ---
 
@@ -140,42 +151,49 @@ Building agents that interact with realistic network environments.
 
 Reinforcement learning in network environments to improve agent policies.
 
-| Approach | Description | Papers |
-|----------|-------------|--------|
-| Agentic RL | Train agent policy through interaction with network simulator | AReaL (free5GC Tau2-Bench), NetworkGym |
-| RLHF for networks | Human feedback on network configuration quality | (unexplored) |
-| Reward design | Define rewards for network KPIs (throughput, latency, SLA) | PC-LLM, DRL for spectrum access |
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [Agent-R1](https://github.com/0russwest0/Agent-R1) | arXiv 2025 | End-to-end RL (PPO/GRPO) for multi-turn tool-calling agents | [GitHub](https://github.com/0russwest0/Agent-R1) |
+| [AgentGym-RL](https://github.com/WooooDyy/AgentGym-RL) | arXiv 2025 | Staged RL training across diverse environments | [GitHub](https://github.com/WooooDyy/AgentGym-RL) |
+| [ComAgent](https://github.com/jiangfeibo/ComAgent) | arXiv 2026 | Multi-LLM agentic framework with closed-loop for beamforming | [GitHub](https://github.com/jiangfeibo/ComAgent) |
+| [ORAN-GUIDE](https://arxiv.org/abs/2506.00576) | arXiv 2025 | Dual-LLM + RAG-enhanced multi-agent RL for O-RAN slicing | - |
+| [LLM-xApp](https://arxiv.org/abs/2501.08760) | NDSS FutureG 2025 | LLM-powered xApp for adaptive radio resource management | - |
 
 ### 3.2 Scaling with Tools
 
 Expanding agent capabilities through external tools and APIs.
 
-| Approach | Description | Papers |
-|----------|-------------|--------|
-| MCP integration | Standardized tool interface for network operations | (proposed) |
-| API-defined action space | Constrain agent to valid network operations via API | Intent-LLM (VipeeGPT API design) |
-| Verification tools | Batfish, HeaderSpace analysis for safety checking | NetLLMBench |
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [Confucius](https://dl.acm.org/doi/10.1145/3718958.3750537) | SIGCOMM 2025 | 60+ network management tools integrated via multi-agent LLM | - |
+| [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1) | arXiv 2024 | Four-module cognitive architecture with external knowledge base | [GitHub](https://github.com/jwentong/WirelessAgent_R1) |
+| [BLAST](https://arxiv.org/abs/2604.12127) | arXiv 2026 | LLM agents + blockchain for autonomous spectrum trading | - |
+| [LAM4PHY_6G](https://github.com/AI4Wireless/LAM4PHY_6G) | Various IEEE 2024-25 | GPT-2 adapted for CSI feedback, beam prediction, multi-task PHY | [GitHub](https://github.com/AI4Wireless/LAM4PHY_6G) |
+| [Intent-LLM](https://ieeexplore.ieee.org/document/11169296/) | IEEE TCCN 2025 | API-defined action space constraining agent to valid operations | - |
 
 ### 3.3 Scaling with Skills
 
-Accumulating reusable network operation skills across tasks.
+Accumulating reusable operation skills across tasks.
 
-| Approach | Description | Papers |
-|----------|-------------|--------|
-| Skill library | Agent stores successful operation sequences for reuse | Analogy: Voyager skill library |
-| Skill discovery | Automatically extract reusable skills from past trajectories | (unexplored in networking) |
-| Skill composition | Combine atomic skills into complex multi-step operations | (unexplored in networking) |
-| Skill injection | Provide domain skill documents to boost agent performance | SWE-Skills-Bench, SWE-Bench 5G spec-as-skill |
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [Voyager](https://github.com/MineDojo/Voyager) | NeurIPS 2023 | First LLM agent with ever-growing executable skill library | [GitHub](https://github.com/MineDojo/Voyager) |
+| [SkillRL](https://github.com/aiming-lab/SkillRL) | arXiv 2026 | Hierarchical skill bank with recursive skill evolution via RL | [GitHub](https://github.com/aiming-lab/SkillRL) |
+| [SAGE](https://arxiv.org/abs/2512.17102) | arXiv 2025 | Skill-Augmented GRPO for self-evolution, 8.9% higher goal completion | - |
+| [PAE](https://yanqval.github.io/PAE/) | arXiv 2024 | Autonomous skill discovery with VLM-based success evaluation as reward | [GitHub](https://yanqval.github.io/PAE/) |
+| [SkillWeaver](https://arxiv.org/abs/2504.07079) | arXiv 2025 | Web agents self-discover and synthesize reusable skill APIs | - |
 
 ### 3.4 Scaling with Memory
 
 Enabling agents to accumulate and reuse experience across tasks.
 
-| Approach | Description | Papers |
-|----------|-------------|--------|
-| Cross-task experience | Remember past diagnoses to speed up future troubleshooting | Analogy: MemoryBank, A-MEM |
-| Network state memory | Persistent knowledge of topology, history, SLA | Analogy: LD-Agent dual memory |
-| Retrieval-augmented | Retrieve relevant past cases or spec documents at inference | RAG for network operations |
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [A-MEM](https://github.com/agiresearch/A-mem) | NeurIPS 2025 | Zettelkasten-style self-organizing memory with dynamic indexing | [GitHub](https://github.com/agiresearch/A-mem) |
+| [TelecomRAG](https://dl.acm.org/doi/10.1145/3656296) | SIGCOMM CCR 2025 | RAG framework optimized for 3GPP Release 16/18 documents | - |
+| [Telco-RAG](https://github.com/netop-team/Telco-RAG) | arXiv 2024 | Dual-stage RAG with custom telecom glossary for 3GPP | [GitHub](https://github.com/netop-team/Telco-RAG) |
+| [ReLLM](https://arxiv.org/abs/2511.22933) | arXiv 2025 | RAG-empowered LLM for dynamic radio resource management in O-RAN | - |
+| [EvolveR](https://arxiv.org/abs/2510.16079) | arXiv 2025 | Self-evolving agents via offline self-distillation of experience | - |
 
 ---
 
