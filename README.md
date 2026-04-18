@@ -39,7 +39,11 @@ Papers, benchmarks, and tools for building AI agents that autonomously configure
   - [4.1 Static Benchmarks](#41-static-benchmarks)
   - [4.2 Dynamic Benchmarks](#42-dynamic-benchmarks)
 - [5. Future Directions](#5-future-directions)
-  - [5.1 World Models for Network Agents](#51-world-models-for-network-agents)
+  - [5.1 Standardized Benchmarking and Evaluation](#51-standardized-benchmarking-and-evaluation)
+  - [5.2 Long-Horizon Network Tasks](#52-long-horizon-network-tasks)
+  - [5.3 Computational Efficiency and Real-Time Performance](#53-computational-efficiency-and-real-time-performance)
+  - [5.4 Omni-Modal Network Engineering Agents](#54-omni-modal-network-engineering-agents)
+  - [5.5 World Models for Network Agents](#55-world-models-for-network-agents)
 - [Contributing](#contributing)
 
 ---
@@ -337,13 +341,38 @@ Runtime-generated queries to avoid data contamination.
 
 ## 5. Future Directions
 
-### 5.1 World Models for Network Agents
+### 5.1 Standardized Benchmarking and Evaluation
 
-World models enable agents to predict the consequences of actions before executing them, reducing costly trial-and-error in real network environments. A network world model would internalize how configurations propagate through topologies, how traffic patterns respond to policy changes, and how faults cascade across interconnected NFs.
+The network engineering agent community lacks unified evaluation protocols. Existing benchmarks cover narrow slices of the task landscape: NetArena evaluates routing, capacity planning, and K8s tasks with dynamic query generation; NetLLMBench and LLM4NetLab target static routing configuration and fault diagnosis. However, no benchmark spans the full Configuration-Optimization-Operations spectrum, and wireless optimization tasks remain entirely uncovered. Standardized evaluation must also go beyond correctness to include safety (will the agent break the network?), efficiency (token and latency cost), and generalization (cross-topology, cross-vendor transfer). The SWE agent community offers a blueprint: SWE-Bench evolved through Lite, Verified, Mobile, and BeyondSWE variants, each addressing a specific evaluation gap.
 
-| Paper | Venue | Method | Code |
-|-------|-------|--------|------|
-| [World Model Framework](https://arxiv.org/abs/2602.01630) | arXiv 2026 | Normative framework integrating interaction, perception, reasoning, and spatial representation for world models | - |
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Dynamic benchmark generation with correctness + safety + latency metrics |
+| [BeyondSWE](https://arxiv.org/abs/2603.03194) | arXiv 2026 | Cross-repo and domain-specific evaluation as a model for network benchmarks |
+
+### 5.2 Long-Horizon Network Tasks
+
+Current network agent benchmarks focus on single-step or short-horizon tasks: fix one routing error, add one node, configure one policy. Real-world network operations involve long-horizon, multi-step reasoning: a capacity upgrade requires topology assessment, device procurement planning, staged migration, traffic rerouting, validation, and rollback preparation. Agents must maintain coherent plans across dozens of interaction steps, recover from intermediate failures, and coordinate across multiple NFs. Long-horizon task design for network agents remains an open challenge.
+
+### 5.3 Computational Efficiency and Real-Time Performance
+
+Network operations often require real-time or near-real-time responses. A fault diagnosis agent that takes 30 seconds to reason is impractical when SLA violations accumulate at millisecond granularity. Current LLM agents rely on frontier models (GPT-4, Claude) with high latency and cost. Deploying efficient, small-footprint models at the network edge is essential for practical adoption. Recent advances in edge-optimized models such as Gemma 4 demonstrate that competitive reasoning can be achieved within tight compute budgets, opening the door for on-device network agents deployed alongside network functions.
+
+### 5.4 Omni-Modal Network Engineering Agents
+
+Existing network agents operate primarily on text: CLI output, configuration files, log messages. Real network operations involve diverse modalities: topology diagrams, signal heatmaps, spectrum waterfalls, time-series metrics dashboards, and even physical site photographs. An omni-modal network agent would perceive and reason across all these modalities, combining visual understanding of network dashboards with textual analysis of logs and structured reasoning over topology graphs.
+
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [OmniGAIA](https://arxiv.org/abs/2602.22897) | arXiv 2026 | Self-evolving omni-modal agent architecture |
+
+### 5.5 World Models for Network Agents
+
+World models enable agents to predict the consequences of actions before executing them, reducing costly trial-and-error in real network environments. A network world model would internalize how configurations propagate through topologies, how traffic patterns respond to policy changes, and how faults cascade across interconnected NFs. Such models could enable agents to simulate "what-if" scenarios before committing changes to production networks.
+
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [World Model Framework](https://arxiv.org/abs/2602.01630) | arXiv 2026 | Normative framework integrating interaction, perception, reasoning, and spatial representation |
 
 ---
 
