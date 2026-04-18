@@ -223,7 +223,8 @@ Data synthesis generates training trajectories at scale without human annotation
 | [OpenResearcher](https://arxiv.org/abs/2603.20278) | arXiv 2026 | 97K+ deep research trajectories from offline corpus | - |
 | [ClawBench](https://arxiv.org/abs/2604.08523) | arXiv 2026 | 153 everyday tasks on 144 production websites | - |
 | [MC-Search](https://arxiv.org/abs/2603.00873) | arXiv 2026 | Step-annotated multimodal search benchmark + process alignment | - |
-| [REDSearcher](https://arxiv.org/abs/2602.14234) | arXiv 2026 | Retrieval-enhanced deep search agent | - |
+| [REDSearcher](https://arxiv.org/abs/2602.14234) | arXiv 2026 | KG-grounded multi-hop task synthesis: Wikidata subgraph sampling with complexity/dispersion controls + local simulated search environment | - |
+| [LMM-Searcher](https://arxiv.org/abs/2604.12890) | arXiv 2026 | KG-skeleton cross-modal multi-hop synthesis: images bound to entities; 12K filtered long-horizon trajectories | - |
 | [ExpSeek](https://arxiv.org/abs/2601.08605) | arXiv 2026 | Experience-seeking data synthesis for agent training | - |
 
 ### 3.2 Scaling with Scaffold
