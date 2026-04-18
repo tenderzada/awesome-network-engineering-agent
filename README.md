@@ -44,6 +44,7 @@ Papers, benchmarks, and tools for building AI agents that autonomously configure
   - [5.3 Computational Efficiency and Real-Time Performance](#53-computational-efficiency-and-real-time-performance)
   - [5.4 Omni-Modal Network Engineering Agents](#54-omni-modal-network-engineering-agents)
   - [5.5 World Models for Network Agents](#55-world-models-for-network-agents)
+  - [5.6 LLM & Agentic Methods for RF Signal Intelligence](#56-llm--agentic-methods-for-rf-signal-intelligence-sei-modulation-spectrum)
 - [Contributing](#contributing)
 
 ---
@@ -373,6 +374,38 @@ World models enable agents to predict the consequences of actions before executi
 | Paper | Venue | Relevance |
 |-------|-------|-----------|
 | [World Model Framework](https://arxiv.org/abs/2602.01630) | arXiv 2026 | Normative framework integrating interaction, perception, reasoning, and spatial representation |
+
+### 5.6 LLM & Agentic Methods for RF Signal Intelligence (SEI, Modulation, Spectrum)
+
+Conventional network engineering agents reason over protocol-level text (configs, logs, telemetry). An emerging line of work instead plugs LLMs and agent loops directly into the physical layer — tokenizing IQ streams, prompting over spectrograms, and orchestrating tool-using agents for spectrum and RF decisions. Specific Emitter Identification (SEI), RF fingerprinting, modulation recognition, and spectrum control are the canonical targets; integrating these with a network agent would extend its competence from Layer-3-and-above into RF-layer authentication, emitter attribution, interference diagnosis, and adaptive access.
+
+**Direct LLM / VLM for RF fingerprinting, SEI, and modulation recognition**
+
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [RF-GPT](https://arxiv.org/abs/2602.14833) | arXiv 2026 | End-to-end RF language model: spectrogram → RF tokens → decoder-only LLM with instruction tuning |
+| [RFF-LLM for UAV ID](https://arxiv.org/abs/2508.12597) | arXiv 2025 | GPT-2-based RFF-LLM for UAV individual identification in ISAC, distilled to a lightweight network |
+| [Let RFF do the talking](https://link.springer.com/article/10.1007/s11432-024-4463-0) | Sci China Info Sci 2025 | BERT-LightRFFI: LLM-distilled lightweight RFFI for 6G edge IoT, 97.52% accuracy |
+| [RadioLLM](https://arxiv.org/abs/2501.17888) | arXiv 2025 | Hybrid prompt + token reprogramming injects IQ patch tokens into GPT-2 for denoising / classification |
+| [Seeing Radio](https://arxiv.org/abs/2601.13157) | arXiv 2026 | VLM + RF-to-image pipeline for explainable 57-class modulation recognition |
+
+**Agentic LLM for spectrum, PHY, and wireless control**
+
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [SCA-LLM](https://arxiv.org/abs/2509.08139) | arXiv 2025 | Spectral-attentive LLM world model for sense-predict-plan agentic communications |
+| [BLAST](https://arxiv.org/abs/2604.12127) | arXiv 2026 | Blockchain-coordinated LLM agents for dynamic spectrum trading |
+| [LLM-Driven Spectrum Access](https://arxiv.org/abs/2604.13132) | arXiv 2026 | Hierarchical state serialization maps combinatorial spectral constraints to LLM reasoning manifold |
+| [6G IoT LLM PHY Optimization](https://arxiv.org/abs/2602.06819) | arXiv 2026 | Dual-LLM loop: optimization-LLM refines prompts; agent-LLM solves PHY tasks |
+| [Autonomous O-RAN Agentic AI](https://arxiv.org/abs/2602.14117) | arXiv 2026 | Multi-scale LLM + SLM + WPFM agents across Non-RT / Near-RT RIC / DU |
+
+**Framing: surveys and tutorials**
+
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [From LAM to Agentic AI Tutorial](https://arxiv.org/abs/2505.22311) | arXiv 2025 | Systematic tutorial on LAM → agentic transition for intelligent communications |
+| [AI Reasoning for Wireless Comms Survey](https://arxiv.org/abs/2509.09193) | arXiv 2025 | ToT / ReAct / CoT reasoning patterns in wireless, including interference identification |
+| [Agent-Based Anti-Jamming UAV Survey](https://arxiv.org/abs/2508.11687) | arXiv 2025 | Perception-Decision-Action agentic anti-jamming survey (RL-based, non-LLM) for spectrum adversaries |
 
 ---
 
