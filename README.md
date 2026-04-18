@@ -327,6 +327,12 @@ Fixed test sets for reproducible evaluation.
 | [SIMCODE](https://arxiv.org/abs/2507.11014) | arXiv 2025 | NL to ns-3 code generation | 400 tasks, 3 levels |
 | [NetConfEval](https://github.com/NetConfEval/NetConfEval) | CoNEXT 2024 | 4 config tasks, runner-up best paper | [GitHub](https://github.com/NetConfEval/NetConfEval) |
 | [WirelessBench](https://wirelessbench.github.io/) | arXiv 2026 | Tolerance-aware, 3392 items, 3 cognitive tiers | [GitHub](https://github.com/jwentong/WirelessBench) |
+| [PeeringLLM-Bench](https://dl.acm.org/doi/10.1145/3763400.3763451) | AINTEC 2025 | NL-to-BGP config translation, multi-vendor syntax | Multi-peer, multi-vendor topologies |
+| [TeleQnA](https://arxiv.org/abs/2310.15051) | arXiv 2023 | Telecom knowledge QA over 3GPP standards and research papers | 10,000 MCQs |
+| [TelBench](https://aclanthology.org/2024.emnlp-industry.45/) | EMNLP-Industry 2024 | Telco-specific LLM knowledge and operations | Multi-task telco suite |
+| [TelAgentBench](https://aclanthology.org/2025.emnlp-industry.83/) | EMNLP-Industry 2025 | Reasoning / planning / action / IF / RAG for Korean telecom | 5-capability agent suite |
+| [TeleTables](https://arxiv.org/abs/2601.04202) | arXiv 2026 | Table interpretation in 3GPP technical specifications | 3GPP table corpus |
+| [LLM-NetCfg-Eval (IETF)](https://datatracker.ietf.org/doc/draft-cui-nmrg-llm-benchmark/) | IETF NMRG 2025 | Intent-driven configuration evaluation framework | Standards-track framework |
 
 ### 4.2 Dynamic Benchmarks
 
@@ -336,6 +342,10 @@ Runtime-generated queries to avoid data contamination.
 |-----------|-------|-------|-------------|
 | [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Route, MALT, K8s | Dynamic query generation, A2A protocol, 3-metric evaluation |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 6G network management | 42 tools, NS-3 calibrated env, closed-loop RL |
+| [TelcoAgent-Bench](https://arxiv.org/abs/2604.06209) | arXiv 2026 | Multilingual telecom troubleshooting | Process correctness, tool alignment, blueprint stability |
+| [WirelessAgent++](https://arxiv.org/abs/2603.00501) | arXiv 2026 | Wireless agent workflow design and evaluation | Automated agentic workflow generation |
+| [Continual NetOps Bench](https://dl.acm.org/doi/10.1145/3744969.3748425) | SIGCOMM 2025 | Networking operations continual evaluation | Continual benchmark generation |
+| [NIKA](https://arxiv.org/abs/2512.16381) | arXiv 2025 | DC / ISP incident diagnosis | Hundreds of incidents, 54 issue types, 5 network scenarios |
 
 ---
 
