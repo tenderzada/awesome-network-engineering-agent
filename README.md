@@ -38,6 +38,8 @@ Papers, benchmarks, and tools for building AI agents that autonomously configure
 - [4. How to Evaluate?](#4-how-to-evaluate)
   - [4.1 Static Benchmarks](#41-static-benchmarks)
   - [4.2 Dynamic Benchmarks](#42-dynamic-benchmarks)
+- [5. Future Directions](#5-future-directions)
+  - [5.1 World Models for Network Agents](#51-world-models-for-network-agents)
 - [Contributing](#contributing)
 
 ---
@@ -277,6 +279,7 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 |-------|-------|--------|------|
 | [DeepAgent](https://github.com/RUC-NLPIR/DeepAgent) | WWW 2026 Oral | Autonomous tool discovery over 16K+ APIs with Memory Folding | [GitHub](https://github.com/RUC-NLPIR/DeepAgent) |
 | [EnvScaler](https://github.com/RUC-NLPIR/EnvScaler) | arXiv 2026 | Programmatic synthesis of 191 tool-interaction environments | [GitHub](https://github.com/RUC-NLPIR/EnvScaler) |
+| [VerlTool](https://arxiv.org/abs/2509.01055) | arXiv 2025 | Modular agentic RL framework for multi-modal tool use (code, search, SQL) | - |
 
 ### 3.3 Scaling with Agentic RL
 
@@ -329,6 +332,18 @@ Runtime-generated queries to avoid data contamination.
 |-----------|-------|-------|-------------|
 | [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Route, MALT, K8s | Dynamic query generation, A2A protocol, 3-metric evaluation |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 6G network management | 42 tools, NS-3 calibrated env, closed-loop RL |
+
+---
+
+## 5. Future Directions
+
+### 5.1 World Models for Network Agents
+
+World models enable agents to predict the consequences of actions before executing them, reducing costly trial-and-error in real network environments. A network world model would internalize how configurations propagate through topologies, how traffic patterns respond to policy changes, and how faults cascade across interconnected NFs.
+
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [World Model Framework](https://arxiv.org/abs/2602.01630) | arXiv 2026 | Normative framework integrating interaction, perception, reasoning, and spatial representation for world models | - |
 
 ---
 
