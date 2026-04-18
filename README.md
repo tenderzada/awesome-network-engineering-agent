@@ -372,7 +372,11 @@ The network engineering agent community lacks unified evaluation protocols. Exis
 
 ### 5.2 Long-Horizon Network Tasks
 
-Current network agent benchmarks focus on single-step or short-horizon tasks: fix one routing error, add one node, configure one policy. Real-world network operations involve long-horizon, multi-step reasoning: a capacity upgrade requires topology assessment, device procurement planning, staged migration, traffic rerouting, validation, and rollback preparation. Agents must maintain coherent plans across dozens of interaction steps, recover from intermediate failures, and coordinate across multiple NFs. Long-horizon task design for network agents remains an open challenge.
+Current network agent benchmarks focus on single-step or short-horizon tasks: fix one routing error, add one node, configure one policy. Real-world network operations involve long-horizon, multi-step reasoning: a capacity upgrade requires topology assessment, device procurement planning, staged migration, traffic rerouting, validation, and rollback preparation. Agents must maintain coherent plans across dozens of interaction steps, recover from intermediate failures, and coordinate across multiple NFs. A central obstacle is context bloat: logs, configs, topology diagrams, and dashboard screenshots accumulate quickly and saturate the context window, forcing agents to drop critical state. Long-horizon task design for network agents remains an open challenge.
+
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [LMM-Searcher](https://arxiv.org/abs/2604.12890) | arXiv 2026 | File-mapping offloads visual assets to external storage with UID references; sustains 100+ interaction rounds — transferable blueprint for network agents juggling heterogeneous long-horizon evidence |
 
 ### 5.3 Computational Efficiency and Real-Time Performance
 
