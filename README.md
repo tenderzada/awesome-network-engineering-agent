@@ -44,7 +44,6 @@ Papers, benchmarks, and tools for building AI agents that autonomously configure
   - [5.3 Computational Efficiency and Real-Time Performance](#53-computational-efficiency-and-real-time-performance)
   - [5.4 Omni-Modal Network Engineering Agents](#54-omni-modal-network-engineering-agents)
   - [5.5 World Models for Network Agents](#55-world-models-for-network-agents)
-  - [5.6 LLM & Agentic Methods for RF Signal Intelligence](#56-llm--agentic-methods-for-rf-signal-intelligence-sei-modulation-spectrum)
 - [Contributing](#contributing)
 
 ---
@@ -92,6 +91,7 @@ Intent (natural language)  +  Network State
 | Capacity planning | MeshAgent, NetArena (MALT) |
 | Spectrum management | BLAST |
 | Energy efficiency | Intent-LLM |
+| RF signal intelligence | RF-GPT, RadioLLM, RFF-LLM, Seeing Radio, SCA-LLM |
 
 #### Network Operations
 
@@ -158,6 +158,12 @@ Building domain capability through pretraining, fine-tuning, or distillation. Mo
 | [TelecomGPT](https://ieeexplore.ieee.org/document/11097898) | IEEE TMLCN 2025 | Continual pretraining + SFT + RLHF on OpenTelecom dataset | - |
 | [BiAn](https://dl.acm.org/doi/10.1145/3718958.3750505) | SIGCOMM 2025 | LLM-based failure localization, 95.5% accuracy at Alibaba Cloud | - |
 | [NetAssistant](https://www.usenix.org/conference/nsdi24/presentation/wang-haopei) | NSDI 2024 | Dialogue-based network diagnosis deployed at ByteDance 3+ years | - |
+| [RF-GPT](https://arxiv.org/abs/2602.14833) | arXiv 2026 | End-to-end RF language model: spectrogram to RF tokens with instruction tuning | - |
+| [RadioLLM](https://arxiv.org/abs/2501.17888) | arXiv 2025 | Hybrid prompt + token reprogramming for IQ signal denoising/classification | - |
+| [RFF-LLM](https://arxiv.org/abs/2508.12597) | arXiv 2025 | GPT-2-based RF fingerprinting for UAV identification in ISAC | - |
+| [Seeing Radio](https://arxiv.org/abs/2601.13157) | arXiv 2026 | VLM + RF-to-image pipeline for 57-class modulation recognition | - |
+| [Let RFF do the talking](https://link.springer.com/article/10.1007/s11432-024-4463-0) | Sci China Info Sci 2025 | LLM-distilled lightweight RFFI for 6G edge IoT | - |
+| [LLM-Driven Spectrum Access](https://arxiv.org/abs/2604.13132) | arXiv 2026 | Hierarchical state serialization for spectral constraint reasoning | - |
 
 ### 2.2 Scaffold-Driven
 
@@ -173,6 +179,8 @@ Building agent capability through framework design on top of frozen models. Capa
 | [MNC](https://www.sciencedirect.com/science/article/pii/S2667305325000572) | Elsevier 2025 | Three-module multi-agent with CoT and reflection | - |
 | [Hermes](https://arxiv.org/abs/2411.06490) | arXiv 2024 | Digital twin + multi-model orchestration for autonomous networks | - |
 | [Intent-LLM](https://ieeexplore.ieee.org/document/11169296/) | IEEE TCCN 2025 | Structured 4-round prompting + API-defined action space (VipeeGPT) | - |
+| [SCA-LLM](https://arxiv.org/abs/2509.08139) | arXiv 2025 | Spectral-attentive LLM world model for sense-predict-plan agentic communications | - |
+| [Autonomous O-RAN Agentic AI](https://arxiv.org/abs/2602.14117) | arXiv 2026 | Multi-scale LLM + SLM + WPFM agents across Non-RT / Near-RT RIC / DU | - |
 
 ### 2.3 Environment-Driven
 
@@ -297,6 +305,7 @@ Agentic RL scales Environment-Driven approaches by training agent policies throu
 | [ComAgent](https://github.com/jiangfeibo/ComAgent) | arXiv 2026 | Multi-LLM closed-loop for wireless beamforming optimization | [GitHub](https://github.com/jiangfeibo/ComAgent) |
 | [ORAN-GUIDE](https://arxiv.org/abs/2506.00576) | arXiv 2025 | Dual-LLM + RAG-enhanced multi-agent RL for O-RAN slicing | - |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | SFT + RL closed-loop in network env, 8B matches GPT-5 | - |
+| [6G IoT LLM PHY](https://arxiv.org/abs/2602.06819) | arXiv 2026 | Dual-LLM loop: optimization-LLM refines prompts, agent-LLM solves PHY tasks | - |
 
 **🔷 Transferable SOTA Methods**
 
@@ -384,38 +393,6 @@ World models enable agents to predict the consequences of actions before executi
 | Paper | Venue | Relevance |
 |-------|-------|-----------|
 | [World Model Framework](https://arxiv.org/abs/2602.01630) | arXiv 2026 | Normative framework integrating interaction, perception, reasoning, and spatial representation |
-
-### 5.6 LLM & Agentic Methods for RF Signal Intelligence (SEI, Modulation, Spectrum)
-
-Conventional network engineering agents reason over protocol-level text (configs, logs, telemetry). An emerging line of work instead plugs LLMs and agent loops directly into the physical layer — tokenizing IQ streams, prompting over spectrograms, and orchestrating tool-using agents for spectrum and RF decisions. Specific Emitter Identification (SEI), RF fingerprinting, modulation recognition, and spectrum control are the canonical targets; integrating these with a network agent would extend its competence from Layer-3-and-above into RF-layer authentication, emitter attribution, interference diagnosis, and adaptive access.
-
-**Direct LLM / VLM for RF fingerprinting, SEI, and modulation recognition**
-
-| Paper | Venue | Relevance |
-|-------|-------|-----------|
-| [RF-GPT](https://arxiv.org/abs/2602.14833) | arXiv 2026 | End-to-end RF language model: spectrogram → RF tokens → decoder-only LLM with instruction tuning |
-| [RFF-LLM for UAV ID](https://arxiv.org/abs/2508.12597) | arXiv 2025 | GPT-2-based RFF-LLM for UAV individual identification in ISAC, distilled to a lightweight network |
-| [Let RFF do the talking](https://link.springer.com/article/10.1007/s11432-024-4463-0) | Sci China Info Sci 2025 | BERT-LightRFFI: LLM-distilled lightweight RFFI for 6G edge IoT, 97.52% accuracy |
-| [RadioLLM](https://arxiv.org/abs/2501.17888) | arXiv 2025 | Hybrid prompt + token reprogramming injects IQ patch tokens into GPT-2 for denoising / classification |
-| [Seeing Radio](https://arxiv.org/abs/2601.13157) | arXiv 2026 | VLM + RF-to-image pipeline for explainable 57-class modulation recognition |
-
-**Agentic LLM for spectrum, PHY, and wireless control**
-
-| Paper | Venue | Relevance |
-|-------|-------|-----------|
-| [SCA-LLM](https://arxiv.org/abs/2509.08139) | arXiv 2025 | Spectral-attentive LLM world model for sense-predict-plan agentic communications |
-| [BLAST](https://arxiv.org/abs/2604.12127) | arXiv 2026 | Blockchain-coordinated LLM agents for dynamic spectrum trading |
-| [LLM-Driven Spectrum Access](https://arxiv.org/abs/2604.13132) | arXiv 2026 | Hierarchical state serialization maps combinatorial spectral constraints to LLM reasoning manifold |
-| [6G IoT LLM PHY Optimization](https://arxiv.org/abs/2602.06819) | arXiv 2026 | Dual-LLM loop: optimization-LLM refines prompts; agent-LLM solves PHY tasks |
-| [Autonomous O-RAN Agentic AI](https://arxiv.org/abs/2602.14117) | arXiv 2026 | Multi-scale LLM + SLM + WPFM agents across Non-RT / Near-RT RIC / DU |
-
-**Framing: surveys and tutorials**
-
-| Paper | Venue | Relevance |
-|-------|-------|-----------|
-| [From LAM to Agentic AI Tutorial](https://arxiv.org/abs/2505.22311) | arXiv 2025 | Systematic tutorial on LAM → agentic transition for intelligent communications |
-| [AI Reasoning for Wireless Comms Survey](https://arxiv.org/abs/2509.09193) | arXiv 2025 | ToT / ReAct / CoT reasoning patterns in wireless, including interference identification |
-| [Agent-Based Anti-Jamming UAV Survey](https://arxiv.org/abs/2508.11687) | arXiv 2025 | Perception-Decision-Action agentic anti-jamming survey (RL-based, non-LLM) for spectrum adversaries |
 
 ---
 
