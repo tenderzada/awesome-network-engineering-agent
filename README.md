@@ -6,9 +6,9 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of papers, benchmarks, and tools for AI agents in network engineering.
+Papers, benchmarks, and tools for building AI agents that autonomously configure, optimize, and operate communication networks.
 
-> Network Engineering Agents are AI systems that autonomously understand network intent, interact with network environments, generate configurations or optimization decisions, and verify outcomes through closed-loop feedback.
+> Network Engineering Agents are LLM-powered systems that read network state, reason about intent, generate actions (configurations, resource allocations, or diagnostic commands), execute them in network environments, and verify outcomes through closed-loop feedback, covering the full spectrum of network configuration, optimization, and operations.
 
 ---
 
@@ -131,6 +131,7 @@ Key references from the SWE agent community:
 | [SWE-Universe](https://arxiv.org/abs/2602.02361) | arXiv 2026 | Multi-language, multi-repo SWE benchmark |
 | [SWE-World](https://arxiv.org/abs/2602.03419) | arXiv 2026 | End-to-end SWE agent evaluation framework |
 | [Agentic Rubrics](https://arxiv.org/abs/2601.04171) | arXiv 2026 | Fine-grained evaluation rubrics for SWE agents |
+| [BeyondSWE](https://arxiv.org/abs/2603.03194) | arXiv 2026 | Cross-repo reasoning, domain-specific tasks, Docker-based evaluation |
 
 ---
 
