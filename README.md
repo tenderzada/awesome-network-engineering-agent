@@ -332,7 +332,7 @@ Fixed test sets for reproducible evaluation.
 | [TelBench](https://aclanthology.org/2024.emnlp-industry.45/) | EMNLP-Industry 2024 | Telco-specific LLM knowledge and operations | Multi-task telco suite |
 | [TelAgentBench](https://aclanthology.org/2025.emnlp-industry.83/) | EMNLP-Industry 2025 | Reasoning / planning / action / IF / RAG for Korean telecom | 5-capability agent suite |
 | [TeleTables](https://arxiv.org/abs/2601.04202) | arXiv 2026 | Table interpretation in 3GPP technical specifications | 3GPP table corpus |
-| [LLM-NetCfg-Eval (IETF)](https://datatracker.ietf.org/doc/draft-cui-nmrg-llm-benchmark/) | IETF NMRG 2025 | Intent-driven configuration evaluation framework | Standards-track framework |
+| [draft-cui-nmrg-llm-benchmark](https://datatracker.ietf.org/doc/draft-cui-nmrg-llm-benchmark/) | IETF NMRG 2025 | Framework for evaluating LLM agents in network configuration | Emulator-based env + multi-dim metrics |
 
 ### 4.2 Dynamic Benchmarks
 
