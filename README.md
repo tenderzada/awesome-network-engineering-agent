@@ -117,6 +117,21 @@ Intent (natural language)  +  Network State
 | Domain knowledge | Programming languages, APIs | 3GPP specs, routing protocols, PHY models |
 | Maturity | Rapidly advancing | Early stage |
 
+Key references from the SWE agent community:
+
+| Paper | Venue | Focus |
+|-------|-------|-------|
+| [SWE-Bench](https://arxiv.org/abs/2310.06770) | ICLR 2024 | Foundational benchmark: real GitHub issues as agent tasks |
+| [SWE-Skills-Bench](https://arxiv.org/abs/2603.15401) | arXiv 2025 | Skill injection evaluation: 80% of skills provide zero improvement |
+| [SWE-Bench Mobile](https://arxiv.org/abs/2602.09540) | arXiv 2025 | iOS/Swift extension with diff-based intent tests |
+| [SWE-Next](https://arxiv.org/abs/2603.20691) | arXiv 2026 | Scalable task synthesis via execution-driven PR mining |
+| [SWE-EVO](https://arxiv.org/abs/2512.18470) | arXiv 2025 | Evolutionary self-improvement for SWE agents |
+| [SWE-MiniSandbox](https://arxiv.org/abs/2602.11210) | arXiv 2026 | Lightweight sandboxed evaluation environments |
+| [ScaleSWE](https://arxiv.org/abs/2602.09892) | arXiv 2026 | Scaling SWE agent training with synthetic data |
+| [SWE-Universe](https://arxiv.org/abs/2602.02361) | arXiv 2026 | Multi-language, multi-repo SWE benchmark |
+| [SWE-World](https://arxiv.org/abs/2602.03419) | arXiv 2026 | End-to-end SWE agent evaluation framework |
+| [Agentic Rubrics](https://arxiv.org/abs/2601.04171) | arXiv 2026 | Fine-grained evaluation rubrics for SWE agents |
+
 ---
 
 ## 2. How to Build?
