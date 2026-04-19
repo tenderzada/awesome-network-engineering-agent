@@ -87,7 +87,7 @@ Intent (natural language)  +  Network State
 | Task | Papers |
 |------|--------|
 | Resource allocation | WirelessAgent, ReLLM, 6GAgentGym, WirelessBench |
-| Beamforming / PHY optimization | ComAgent, LAM4PHY_6G, WirelessBench |
+| Beamforming / PHY optimization | ComAgent, WirelessBench |
 | Capacity planning | MeshAgent, NetArena (MALT) |
 | Spectrum management | BLAST |
 | Energy efficiency | Intent-LLM |
@@ -284,7 +284,6 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [Confucius](https://dl.acm.org/doi/10.1145/3718958.3750537) | SIGCOMM 2025 | 60+ network management tools integrated via multi-agent LLM | - |
 | [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1) | arXiv 2024 | Four-module cognitive architecture with external knowledge base | [GitHub](https://github.com/jwentong/WirelessAgent_R1) |
 | [BLAST](https://arxiv.org/abs/2604.12127) | arXiv 2026 | LLM agents + blockchain for autonomous spectrum trading | - |
-| [LAM4PHY_6G](https://github.com/AI4Wireless/LAM4PHY_6G) | Various IEEE 2024-25 | GPT-2 adapted for CSI feedback, beam prediction, multi-task PHY | [GitHub](https://github.com/AI4Wireless/LAM4PHY_6G) |
 | [Intent-LLM](https://ieeexplore.ieee.org/document/11169296/) | IEEE TCCN 2025 | API-defined action space constraining agent to valid operations | - |
 
 **🔷 Transferable SOTA Methods**
@@ -343,7 +342,6 @@ Fixed test sets for reproducible evaluation.
 | [TelBench](https://aclanthology.org/2024.emnlp-industry.45/) | EMNLP-Industry 2024 | Telco-specific LLM knowledge and operations | Multi-task telco suite |
 | [TelAgentBench](https://aclanthology.org/2025.emnlp-industry.83/) | EMNLP-Industry 2025 | Reasoning / planning / action / IF / RAG for Korean telecom | 5-capability agent suite |
 | [TeleTables](https://arxiv.org/abs/2601.04202) | arXiv 2026 | Table interpretation in 3GPP technical specifications | 3GPP table corpus |
-| [draft-cui-nmrg-llm-benchmark](https://datatracker.ietf.org/doc/draft-cui-nmrg-llm-benchmark/) | IETF NMRG 2025 | Framework for evaluating LLM agents in network configuration | Emulator-based env + multi-dim metrics |
 
 ### 4.2 Dynamic Benchmarks
 
