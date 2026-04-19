@@ -378,10 +378,15 @@ Current network agent benchmarks focus on single-step or short-horizon tasks: fi
 | Paper | Venue | Relevance |
 |-------|-------|-----------|
 | [LMM-Searcher](https://arxiv.org/abs/2604.12890) | arXiv 2026 | File-mapping offloads visual assets to external storage with UID references; sustains 100+ interaction rounds — transferable blueprint for network agents juggling heterogeneous long-horizon evidence |
+| [MC-Search](https://arxiv.org/abs/2603.00873) | ICLR 2026 | 3,333-sample benchmark with step-annotated multi-hop chains (avg 3.7 hops, 5 topologies); introduces process-level metrics (step-hit, rolling deviation) to diagnose where long reasoning fails — blueprint for evaluating long-horizon network agents beyond end-answer accuracy |
 
 ### 5.3 Computational Efficiency and Real-Time Performance
 
-Network operations often require real-time or near-real-time responses. A fault diagnosis agent that takes 30 seconds to reason is impractical when SLA violations accumulate at millisecond granularity. Current LLM agents rely on frontier models (GPT-4, Claude) with high latency and cost. Deploying efficient, small-footprint models at the network edge is essential for practical adoption. Recent advances in edge-optimized models such as Gemma 4 demonstrate that competitive reasoning can be achieved within tight compute budgets, opening the door for on-device network agents deployed alongside network functions.
+Network operations often require real-time or near-real-time responses. A fault diagnosis agent that takes 30 seconds to reason is impractical when SLA violations accumulate at millisecond granularity. Current LLM agents rely on frontier models (GPT-4, Claude) with high latency and cost. Deploying efficient, small-footprint models at the network edge is essential for practical adoption. Recent advances in edge-optimized models such as Gemma 4 demonstrate that competitive reasoning can be achieved within tight compute budgets, opening the door for on-device network agents deployed alongside network functions. A critical reframing comes from AgentCPM-Explore: for 4B-scale agents, the bottleneck is **reasoning stability, not capability ceiling** — Pass@64 on GAIA reaches 97.09%, proving the model *can* solve complex tasks but is held back by variance from catastrophic forgetting during SFT, reward-noise sensitivity during RL, and context pollution during inference. For edge network agents, this shifts the research agenda from "shrink the model" to "stabilize the trajectory" (parameter fusion, reward denoising, context refining).
+
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [AgentCPM-Explore](https://arxiv.org/abs/2602.06485) | arXiv 2026 | 4B edge agent matches 32B baselines on GAIA (63.9%) by targeting reasoning stability instead of capacity — DELLA weight fusion, three-layer reward-signal denoising, and dual-loop context refining; Pass@64=97.09% demonstrates the capability is latent, variance is the true bottleneck |
 
 ### 5.4 Omni-Modal Network Engineering Agents
 
