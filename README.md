@@ -334,7 +334,7 @@ Fixed test sets for reproducible evaluation.
 | Benchmark | Venue | Tasks | Scale |
 |-----------|-------|-------|-------|
 | [NetLLMBench](https://github.com/tum-lkn/netllmbench) | IEEE 2025 | BGP/OSPF/static route config | Fixed configs |
-| [LLM4NetLab](https://github.com/zhihao1998/LLM4NetLab) | SIGCOMM 2025 | Fault diagnosis | Curated incidents |
+| [NIKA](https://arxiv.org/abs/2507.01997) | SIGCOMM NetObs Workshop 2025 | Fault diagnosis | Kathará playground + chaos engineering; standardized agent–env API; trajectory logging ([repo](https://github.com/zhihao1998/LLM4NetLab)) |
 | [SIMCODE](https://arxiv.org/abs/2507.11014) | arXiv 2025 | NL to ns-3 code generation | 400 tasks, 3 levels |
 | [NetConfEval](https://github.com/NetConfEval/NetConfEval) | CoNEXT 2024 | 4 config tasks, runner-up best paper | [GitHub](https://github.com/NetConfEval/NetConfEval) |
 | [WirelessBench](https://wirelessbench.github.io/) | arXiv 2026 | Tolerance-aware, 3392 items, 3 cognitive tiers | [GitHub](https://github.com/jwentong/WirelessBench) |
@@ -356,7 +356,6 @@ Runtime-generated queries to avoid data contamination.
 | [TelcoAgent-Bench](https://arxiv.org/abs/2604.06209) | arXiv 2026 | Multilingual telecom troubleshooting | Process correctness, tool alignment, blueprint stability |
 | [WirelessAgent++](https://arxiv.org/abs/2603.00501) | arXiv 2026 | Wireless agent workflow design and evaluation | Automated agentic workflow generation |
 | [Continual NetOps Bench](https://dl.acm.org/doi/10.1145/3744969.3748425) | SIGCOMM 2025 | Networking operations continual evaluation | Continual benchmark generation |
-| [NIKA](https://arxiv.org/abs/2512.16381) | arXiv 2025 | DC / ISP incident diagnosis | Hundreds of incidents, 54 issue types, 5 network scenarios |
 
 ---
 
@@ -398,11 +397,12 @@ Existing network agents operate primarily on text: CLI output, configuration fil
 
 ### 5.5 World Models for Network Agents
 
-World models enable agents to predict the consequences of actions before executing them, reducing costly trial-and-error in real network environments. A network world model would internalize how configurations propagate through topologies, how traffic patterns respond to policy changes, and how faults cascade across interconnected NFs. Such models could enable agents to simulate "what-if" scenarios before committing changes to production networks.
+World models enable agents to predict the consequences of actions before executing them, reducing costly trial-and-error in real network environments. A network world model would internalize how configurations propagate through topologies, how traffic patterns respond to policy changes, and how faults cascade across interconnected NFs. Such models could enable agents to simulate "what-if" scenarios before committing changes to production networks. Going further, recent work argues for wiring **reflective planning** *inside* the world model: a PlanAgent decomposes intent into ordered sub-actions, a CriticAgent scores each rollout, and inner/outer loops either locally refine or globally re-plan. For networking, this turns the world model from a passive predictor into an active safety interlock that rejects infeasible action chains before any change touches the live topology.
 
 | Paper | Venue | Relevance |
 |-------|-------|-----------|
 | [World Model Framework](https://arxiv.org/abs/2602.01630) | arXiv 2026 | Normative framework integrating interaction, perception, reasoning, and spatial representation |
+| [SPIRAL](https://arxiv.org/abs/2603.08403) | arXiv 2026 | Closed-loop think–act–reflect world model; PlanAgent decomposes intent, CriticAgent scores rollouts on 5 axes, inner/outer loops locally refine or globally re-plan — reflective-planning blueprint transferable to network agents as a pre-deployment safety interlock |
 
 ---
 
