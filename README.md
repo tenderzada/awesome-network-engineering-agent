@@ -209,6 +209,8 @@ Data synthesis generates training trajectories at scale without human annotation
 |-------|-------|--------|------|
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 6G-Forge: Self-Instruct with execution verification for network tasks | - |
 | [NetArena](https://github.com/Froot-NetSys/NetArena) | ICLR 2026 | Dynamic query generation for network benchmarks | [GitHub](https://github.com/Froot-NetSys/NetArena) |
+| [TSLAM-Mini](https://arxiv.org/abs/2505.07877) | arXiv 2025 | 100K-sample telecom instruction corpus via digital-twin simulation + RFC/3GPP scraping across 20 use-cases for QLoRA fine-tuning | - |
+| [Think Less Label Better](https://arxiv.org/abs/2509.25736) | IEEE ICC 2026 | KG-grounded QA synthesis with retriever + base-generator + RAGAS filtering for RAN troubleshooting fine-tuning | - |
 
 **🔷 Transferable SOTA Methods**
 
@@ -226,6 +228,10 @@ Data synthesis generates training trajectories at scale without human annotation
 | [REDSearcher](https://arxiv.org/abs/2602.14234) | arXiv 2026 | KG-grounded multi-hop task synthesis: Wikidata subgraph sampling with complexity/dispersion controls + local simulated search environment | - |
 | [LMM-Searcher](https://arxiv.org/abs/2604.12890) | arXiv 2026 | KG-skeleton cross-modal multi-hop synthesis: images bound to entities; 12K filtered long-horizon trajectories | - |
 | [ExpSeek](https://arxiv.org/abs/2601.08605) | arXiv 2026 | Experience-seeking data synthesis for agent training | - |
+| [TOUCAN](https://arxiv.org/abs/2510.01179) | arXiv 2025 | 1.5M multi-tool multi-turn trajectories from ~500 real MCP servers spanning 2,000+ tools with execution verification | - |
+| [APIGen-MT](https://arxiv.org/abs/2504.03601) | arXiv 2025 | Committee-reviewed task blueprints + POMDP-style agent-human interplay for verified multi-turn trajectories | - |
+| [AgentScaler](https://arxiv.org/abs/2509.13311) | arXiv 2025 | Database-backed tool graphs with API community detection and two-phase foundational + domain-specialized fine-tuning | - |
+| [Self-Challenging Agents](https://arxiv.org/abs/2506.01716) | arXiv 2025 | Self-play loop alternating Challenger (Code-as-Task proposer with verifier) and Executor (RL on self-generated tasks) | - |
 
 ### 3.2 Scaling with Scaffold
 
@@ -240,6 +246,8 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [TelecomRAG](https://dl.acm.org/doi/10.1145/3656296) | SIGCOMM CCR 2025 | RAG optimized for 3GPP Release 16/18 documents | - |
 | [Telco-RAG](https://github.com/netop-team/Telco-RAG) | Globecom 2024 | Dual-stage RAG with custom telecom glossary | [GitHub](https://github.com/netop-team/Telco-RAG) |
 | [ReLLM](https://arxiv.org/abs/2511.22933) | arXiv 2025 | RAG-empowered LLM for dynamic radio resource management in O-RAN | - |
+| [TelcoAI](https://arxiv.org/abs/2601.16984) | IJCNLP-AACL 2025 | Agentic multi-modal RAG over 3GPP specs with section-aware chunking, structured query planning, and text+diagram fusion | - |
+| [6G RAN Compliance Agent](https://arxiv.org/abs/2512.12400) | IEEE Comm Std Mag 2026 | LLM agents + RAG over O-RAN Alliance and 3GPP standards for explainable compliance audit and remediation | - |
 
 **🔷 Transferable SOTA Methods**
 
@@ -251,8 +259,17 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [EvolveR](https://arxiv.org/abs/2510.16079) | arXiv 2025 | Self-distillation of trajectories into reusable strategic principles | - |
 | [Omni-SimpleMem](https://arxiv.org/abs/2604.01007) | arXiv 2026 | Simplified unified memory management for LLM agents | - |
 | [A-RAG](https://arxiv.org/abs/2602.03442) | arXiv 2026 | Agentic RAG with adaptive memory | - |
+| [GAM](https://arxiv.org/abs/2604.12285) | arXiv 2026 | Two-tier graph memory: global Topic Associative Network over local Event Progression Graphs with top-down retrieval | - |
+| [ACON](https://arxiv.org/abs/2510.00615) | arXiv 2025 | Natural-language compression guidelines learned by contrasting success/failure trajectories, 26–54% peak-token reduction | - |
 
 #### 3.2.2 Skills
+
+**🌐 In Network Engineering**
+
+| Paper | Venue | Method | Code |
+|-------|-------|--------|------|
+| [KubeIntellect](https://arxiv.org/abs/2509.02449) | arXiv 2025 | Supervisor-orchestrated K8s agent with Code Generator Agent synthesizing reusable tools/skills at 93% success over 200 NL queries | - |
+| [SkillForge](https://arxiv.org/abs/2604.08618) | SIGIR 2026 Industry | Domain-grounded skill creator + three-stage self-evolution from deployment failures across 1,883 cloud-support tickets | - |
 
 **🔷 Transferable SOTA Methods**
 
@@ -274,6 +291,10 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [SKILL0](https://arxiv.org/abs/2604.02268) | arXiv 2026 | Zero-shot skill acquisition from demonstrations | - |
 | [SkillX](https://arxiv.org/abs/2604.04804) | arXiv 2026 | Cross-domain skill transfer for LLM agents | - |
 | [OmniGAIA](https://arxiv.org/abs/2602.22897) | arXiv 2026 | Self-evolving agent via generative adversarial skill improvement | - |
+| [MACLA](https://arxiv.org/abs/2512.18950) | AAMAS 2026 | Hierarchical procedural memory with Bayesian reliability tracking; 2,851 trajectories distilled into 187 procedures | - |
+| [CoEvoSkills](https://arxiv.org/abs/2604.01687) | arXiv 2026 | Skill Generator co-evolves with Surrogate Verifier providing actionable feedback without ground-truth tests | - |
+| [SoK Agentic Skills](https://arxiv.org/abs/2602.20867) | arXiv 2026 | Skill-lifecycle taxonomy + supply-chain threat model with ~1,200 malicious-skill ClawHavoc case study | - |
+| [SkillsInWild](https://arxiv.org/abs/2604.04323) | arXiv 2026 | In-the-wild skill-retrieval evaluation over 34K community skills; query-specific refinement lifts 57.7% → 65.5% | - |
 
 #### 3.2.3 Tools
 
@@ -285,6 +306,7 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1) | arXiv 2024 | Four-module cognitive architecture with external knowledge base | [GitHub](https://github.com/jwentong/WirelessAgent_R1) |
 | [BLAST](https://arxiv.org/abs/2604.12127) | arXiv 2026 | LLM agents + blockchain for autonomous spectrum trading | - |
 | [Intent-LLM](https://ieeexplore.ieee.org/document/11169296/) | IEEE TCCN 2025 | API-defined action space constraining agent to valid operations | - |
+| [NetMCP](https://arxiv.org/abs/2510.13467) | arXiv 2025 | SONAR: semantic- and network-aware MCP tool routing jointly over similarity and QoS across five network states | - |
 
 **🔷 Transferable SOTA Methods**
 
@@ -293,6 +315,9 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [DeepAgent](https://github.com/RUC-NLPIR/DeepAgent) | WWW 2026 Oral | Autonomous tool discovery over 16K+ APIs with Memory Folding | [GitHub](https://github.com/RUC-NLPIR/DeepAgent) |
 | [EnvScaler](https://github.com/RUC-NLPIR/EnvScaler) | arXiv 2026 | Programmatic synthesis of 191 tool-interaction environments | [GitHub](https://github.com/RUC-NLPIR/EnvScaler) |
 | [VerlTool](https://arxiv.org/abs/2509.01055) | arXiv 2025 | Modular agentic RL framework for multi-modal tool use (code, search, SQL) | - |
+| [ToolGen](https://arxiv.org/abs/2410.03439) | ICLR 2025 | Per-tool virtual tokens unify retrieval and calling as single generation step, scaling to 47,000+ tools without retriever | - |
+| [ToolRL](https://arxiv.org/abs/2504.13958) | NeurIPS 2025 | Principled reward design for tool-use RL with GRPO, +15% over SFT and +17% over base | - |
+| [Chain-of-Tools](https://arxiv.org/abs/2503.16779) | arXiv 2025 | Frozen-LLM semantic tool vectors for zero-shot CoT reasoning over massive pools of unseen tools | - |
 
 ### 3.3 Scaling with Agentic RL
 
@@ -306,6 +331,10 @@ Agentic RL scales Environment-Driven approaches by training agent policies throu
 | [ORAN-GUIDE](https://arxiv.org/abs/2506.00576) | arXiv 2025 | Dual-LLM + RAG-enhanced multi-agent RL for O-RAN slicing | - |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | SFT + RL closed-loop in network env, 8B matches GPT-5 | - |
 | [6G IoT LLM PHY](https://arxiv.org/abs/2602.06819) | arXiv 2026 | Dual-LLM loop: optimization-LLM refines prompts, agent-LLM solves PHY tasks | - |
+| [QoE-Slice Agent](https://arxiv.org/abs/2512.20997) | arXiv 2025 | RAG-driven intent inference + DRL slice orchestrator + incremental memory for QoE-reward-shaped industrial-IoT slicing | - |
+| [PA-MRL](https://arxiv.org/abs/2506.00574) | arXiv 2025 | Prompt-Augmented Multi-agent RL with learnable soft prompts over ORANSight for dynamic O-RAN slicing | - |
+| [DT-6G-RA](https://arxiv.org/abs/2506.18293) | arXiv 2025 | Hierarchical multi-layer digital twin with LLM orchestration and model-based/model-free RL for 6G resource allocation | - |
+| [LLM-CC](https://arxiv.org/abs/2508.16074) | arXiv 2025 | LLM code synthesis + reward-guided refinement over BBR-style congestion control using throughput/latency as scalar reward | - |
 
 **🔷 Transferable SOTA Methods**
 
@@ -321,6 +350,10 @@ Agentic RL scales Environment-Driven approaches by training agent policies throu
 | [GSPO](https://arxiv.org/abs/2507.18071) | arXiv 2025 | Group-step policy optimization for multi-turn agents | - |
 | [ArenaRL](https://arxiv.org/abs/2601.06487) | arXiv 2026 | Arena-based competitive RL for agent self-play | - |
 | [Soft Adaptive PO](https://arxiv.org/abs/2511.20347) | arXiv 2025 | Soft adaptive policy optimization for stable agent training | - |
+| [DAPO](https://arxiv.org/abs/2503.14476) | arXiv 2025 | Decoupled-Clip + Dynamic-Sampling PO with Clip-Higher, token-level PG loss, and overlong reward shaping at 32B scale | - |
+| [REINFORCE++](https://arxiv.org/abs/2501.03262) | arXiv 2025 | Critic-free RLHF with global-batch advantage normalization debiasing the prompt-local GRPO estimator | - |
+| [ToRL](https://arxiv.org/abs/2503.23383) | arXiv 2025 | Tool-integrated RL from base LLMs with outcome-only reward; emergent tool invocation without SFT warm-up | - |
+| [OPRL](https://arxiv.org/abs/2509.19199) | arXiv 2025 | Alternating implicit PRM and policy via trajectory-level DPO for dense step-wise rewards + episode advantages | - |
 
 ---
 
