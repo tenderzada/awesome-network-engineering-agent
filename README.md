@@ -228,9 +228,9 @@ Data synthesis generates training trajectories at scale without human annotation
 | [REDSearcher](https://arxiv.org/abs/2602.14234) | arXiv 2026 | KG-grounded multi-hop task synthesis: Wikidata subgraph sampling with complexity/dispersion controls + local simulated search environment | - |
 | [LMM-Searcher](https://arxiv.org/abs/2604.12890) | arXiv 2026 | KG-skeleton cross-modal multi-hop synthesis: images bound to entities; 12K filtered long-horizon trajectories | - |
 | [ExpSeek](https://arxiv.org/abs/2601.08605) | arXiv 2026 | Experience-seeking data synthesis for agent training | - |
-| [TOUCAN](https://arxiv.org/abs/2510.01179) | arXiv 2025 | 1.5M multi-tool multi-turn trajectories from ~500 real MCP servers spanning 2,000+ tools with execution verification | [Github](https://github.com/TheAgentArk/Toucan) |
+| [TOUCAN](https://arxiv.org/abs/2510.01179) | arXiv 2025 | 1.5M multi-tool multi-turn trajectories from ~500 real MCP servers spanning 2,000+ tools with execution verification | [GitHub](https://github.com/TheAgentArk/Toucan) |
 | [APIGen-MT](https://arxiv.org/abs/2504.03601) | arXiv 2025 | Committee-reviewed task blueprints + POMDP-style agent-human interplay for verified multi-turn trajectories | - |
-| [AgentScaler](https://arxiv.org/abs/2509.13311) | NeurIPS 2025 | Database-backed tool graphs with API community detection and two-phase foundational + domain-specialized fine-tuning | [Github](https://github.com/Alibaba-NLP/DeepResearch) |
+| [AgentScaler](https://arxiv.org/abs/2509.13311) | NeurIPS 2025 | Database-backed tool graphs with API community detection and two-phase foundational + domain-specialized fine-tuning | [GitHub](https://github.com/Alibaba-NLP/DeepResearch) |
 | [Self-Challenging Agents](https://arxiv.org/abs/2506.01716) | NeurIPS 2025 | Self-Challenging framework featuring a Challenger generating Code-as-Task formulations with verifiers, and an Executor applying RL on these self-synthesized tasks | - |
 
 ### 3.2 Scaling with Scaffold
@@ -260,7 +260,7 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [Omni-SimpleMem](https://arxiv.org/abs/2604.01007) | arXiv 2026 | Simplified unified memory management for LLM agents | - |
 | [A-RAG](https://arxiv.org/abs/2602.03442) | arXiv 2026 | Agentic RAG with adaptive memory | - |
 | [GAM](https://arxiv.org/abs/2604.12285) | arXiv 2026 | Two-tier graph memory: global Topic Associative Network over local Event Progression Graphs with top-down retrieval | - |
-| [ACON](https://arxiv.org/abs/2510.00615) | arXiv 2025 | Natural-language compression guidelines learned by contrasting success/failure trajectories, 26–54% peak-token reduction | [Github](https://github.com/microsoft/acon) |
+| [ACON](https://arxiv.org/abs/2510.00615) | arXiv 2025 | Natural-language compression guidelines learned by contrasting success/failure trajectories, 26–54% peak-token reduction | [GitHub](https://github.com/microsoft/acon) |
 
 #### 3.2.2 Skills
 
@@ -268,7 +268,7 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 
 | Paper | Venue | Method | Code |
 |-------|-------|--------|------|
-| [KubeIntellect](https://arxiv.org/abs/2509.02449) | arXiv 2025 | Supervisor-orchestrated K8s agent featuring a Code Generator Agent that dynamically synthesizes and registers reusable tools | [Github](https://github.com/MSKazemi/KubeIntellect) |
+| [KubeIntellect](https://arxiv.org/abs/2509.02449) | arXiv 2025 | Supervisor-orchestrated K8s agent featuring a Code Generator Agent that dynamically synthesizes and registers reusable tools | [GitHub](https://github.com/MSKazemi/KubeIntellect) |
 | [SkillForge](https://arxiv.org/abs/2604.08618) | arXiv 2026 | Domain-Contextualized Skill Creator + three-stage self-evolution pipeline refining agent skills from execution failures across 1,883 cloud support tickets | - |
 
 **🔷 Transferable SOTA Methods**
@@ -291,10 +291,10 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [SKILL0](https://arxiv.org/abs/2604.02268) | arXiv 2026 | Zero-shot skill acquisition from demonstrations | - |
 | [SkillX](https://arxiv.org/abs/2604.04804) | arXiv 2026 | Cross-domain skill transfer for LLM agents | - |
 | [OmniGAIA](https://arxiv.org/abs/2602.22897) | arXiv 2026 | Self-evolving agent via generative adversarial skill improvement | - |
-| [MACLA](https://arxiv.org/abs/2512.18950) | AAMAS 2026 | Hierarchical procedural memory with Bayesian reliability tracking; 2,851 trajectories distilled into 187 procedures | [Github](https://github.com/S-Forouzandeh/MACLA-LLM-Agents-AAMAS-2026-Conference) |
-| [CoEvoSkills](https://arxiv.org/abs/2604.01687) | arXiv 2026 | Skill Generator co-evolves with a Surrogate Verifier to provide actionable feedback without access to ground-truth test content | [Github](https://github.com/Zhang-Henry/CoEvoSkills) |
+| [MACLA](https://arxiv.org/abs/2512.18950) | AAMAS 2026 | Hierarchical procedural memory with Bayesian reliability tracking; 2,851 trajectories distilled into 187 procedures | [GitHub](https://github.com/S-Forouzandeh/MACLA-LLM-Agents-AAMAS-2026-Conference) |
+| [CoEvoSkills](https://arxiv.org/abs/2604.01687) | arXiv 2026 | Skill Generator co-evolves with a Surrogate Verifier to provide actionable feedback without access to ground-truth test content | [GitHub](https://github.com/Zhang-Henry/CoEvoSkills) |
 | [SoK Agentic Skills](https://arxiv.org/abs/2602.20867) | arXiv 2026 | Skill lifecycle model and dual taxonomies + supply-chain threat model with ~1,200 malicious-skill ClawHavoc case study | - |
-| [Skill-Usage](https://arxiv.org/abs/2604.04323) | arXiv 2026 | In-the-wild skill retrieval and query-specific refinement evaluation over 34K community skills | [Github](https://github.com/UCSB-NLP-Chang/Skill-Usage) |
+| [Skill-Usage](https://arxiv.org/abs/2604.04323) | arXiv 2026 | In-the-wild skill retrieval and query-specific refinement evaluation over 34K community skills | [GitHub](https://github.com/UCSB-NLP-Chang/Skill-Usage) |
 
 #### 3.2.3 Tools
 
@@ -306,7 +306,7 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1) | arXiv 2024 | Four-module cognitive architecture with external knowledge base | [GitHub](https://github.com/jwentong/WirelessAgent_R1) |
 | [BLAST](https://arxiv.org/abs/2604.12127) | arXiv 2026 | LLM agents + blockchain for autonomous spectrum trading | - |
 | [Intent-LLM](https://ieeexplore.ieee.org/document/11169296/) | IEEE TCCN 2025 | API-defined action space constraining agent to valid operations | - |
-| [NetMCP](https://arxiv.org/abs/2510.13467) | arXiv 2025 | SONAR: an MCP tool routing algorithm that jointly optimizes semantic similarity and real-time network QoS metrics for adaptive tool selection | [Github](https://github.com/NICE-HKU/NetMCP) |
+| [NetMCP](https://arxiv.org/abs/2510.13467) | arXiv 2025 | SONAR: an MCP tool routing algorithm that jointly optimizes semantic similarity and real-time network QoS metrics for adaptive tool selection | [GitHub](https://github.com/NICE-HKU/NetMCP) |
 
 **🔷 Transferable SOTA Methods**
 
@@ -315,9 +315,9 @@ Scaffold scaling enriches frozen-model agent frameworks with memory, skills, and
 | [DeepAgent](https://github.com/RUC-NLPIR/DeepAgent) | WWW 2026 Oral | Autonomous tool discovery over 16K+ APIs with Memory Folding | [GitHub](https://github.com/RUC-NLPIR/DeepAgent) |
 | [EnvScaler](https://github.com/RUC-NLPIR/EnvScaler) | arXiv 2026 | Programmatic synthesis of 191 tool-interaction environments | [GitHub](https://github.com/RUC-NLPIR/EnvScaler) |
 | [VerlTool](https://arxiv.org/abs/2509.01055) | arXiv 2025 | Modular agentic RL framework for multi-modal tool use (code, search, SQL) | - |
-| [ToolGen](https://arxiv.org/abs/2410.03439) | ICLR 2025 | Per-tool virtual tokens unify retrieval and calling as single generation step, scaling to 47,000+ tools without retriever | [Github](https://github.com/Reason-Wang/ToolGen) |
-| [ToolRL](https://arxiv.org/abs/2504.13958) | NeurIPS 2025 | Principled reward design for tool-use RL with GRPO, +15% over SFT and +17% over base | [Github](https://github.com/qiancheng0/ToolRL) |
-| [Chain-of-Tools](https://arxiv.org/abs/2503.16779) | arXiv 2025 | Frozen-LLM semantic tool vectors for ICL-prompted CoT reasoning over massive pools of unseen tools | [Github](https://github.com/fairyshine/Chain-of-Tools) |
+| [ToolGen](https://arxiv.org/abs/2410.03439) | ICLR 2025 | Per-tool virtual tokens unify retrieval and calling as single generation step, scaling to 47,000+ tools without retriever | [GitHub](https://github.com/Reason-Wang/ToolGen) |
+| [ToolRL](https://arxiv.org/abs/2504.13958) | NeurIPS 2025 | Principled reward design for tool-use RL with GRPO, +15% over SFT and +17% over base | [GitHub](https://github.com/qiancheng0/ToolRL) |
+| [Chain-of-Tools](https://arxiv.org/abs/2503.16779) | arXiv 2025 | Frozen-LLM semantic tool vectors for ICL-prompted CoT reasoning over massive pools of unseen tools | [GitHub](https://github.com/fairyshine/Chain-of-Tools) |
 
 ### 3.3 Scaling with Agentic RL
 
@@ -349,9 +349,9 @@ Agentic RL scales Environment-Driven approaches by training agent policies throu
 | [GSPO](https://arxiv.org/abs/2507.18071) | arXiv 2025 | Group-step policy optimization for multi-turn agents | - |
 | [ArenaRL](https://arxiv.org/abs/2601.06487) | arXiv 2026 | Arena-based competitive RL for agent self-play | - |
 | [Soft Adaptive PO](https://arxiv.org/abs/2511.20347) | arXiv 2025 | Soft adaptive policy optimization for stable agent training | - |
-| [DAPO](https://arxiv.org/abs/2503.14476) | arXiv 2025 | Decoupled-Clip + Dynamic-Sampling PO with Clip-Higher, token-level PG loss, and overlong reward shaping at 32B scale | [Github](https://github.com/BytedTsinghua-SIA/DAPO) |
+| [DAPO](https://arxiv.org/abs/2503.14476) | arXiv 2025 | Decoupled-Clip + Dynamic-Sampling PO with Clip-Higher, token-level PG loss, and overlong reward shaping at 32B scale | [GitHub](https://github.com/BytedTsinghua-SIA/DAPO) |
 | [REINFORCE++](https://arxiv.org/abs/2501.03262) | arXiv 2025 | Critic-free RLHF with global-batch advantage normalization debiasing the prompt-local GRPO estimator | - |
-| [ToRL](https://arxiv.org/abs/2503.23383) | arXiv 2025 | Tool-integrated RL from base LLMs with rule-based rewards; emergent tool invocation without prior SFT | [Github](https://github.com/GAIR-NLP/ToRL) |
+| [ToRL](https://arxiv.org/abs/2503.23383) | arXiv 2025 | Tool-integrated RL from base LLMs with rule-based rewards; emergent tool invocation without prior SFT | [GitHub](https://github.com/GAIR-NLP/ToRL) |
 | [OPRL](https://arxiv.org/abs/2509.19199) | arXiv 2025 | Alternating implicit PRM and policy via trajectory-level DPO for dense step-wise rewards + episode advantages | - |
 
 ---
