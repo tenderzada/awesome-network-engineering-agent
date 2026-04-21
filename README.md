@@ -365,6 +365,7 @@ Fixed test sets for reproducible evaluation.
 | Benchmark | Venue | Tasks | Scale |
 |-----------|-------|-------|-------|
 | [NetLLMBench](https://github.com/tum-lkn/netllmbench) | IEEE 2025 | BGP/OSPF/static route config | Fixed configs |
+| [SWE-Bench 5G](https://huggingface.co/datasets/tenderzada/SWEBench5G) | Preprint 2026 | AI coding agents for 5G core network bug fixing | 210 tasks from free5GC, Open5GS, and Magma |
 | [NIKA](https://arxiv.org/abs/2507.01997) | SIGCOMM NetObs Workshop 2025 | Fault diagnosis | Kathará playground + chaos engineering; standardized agent–env API; trajectory logging ([repo](https://github.com/zhihao1998/LLM4NetLab)) |
 | [SIMCODE](https://arxiv.org/abs/2507.11014) | arXiv 2025 | NL to ns-3 code generation | 400 tasks, 3 levels |
 | [NetConfEval](https://github.com/NetConfEval/NetConfEval) | CoNEXT 2024 | 4 config tasks, runner-up best paper | [GitHub](https://github.com/NetConfEval/NetConfEval) |
