@@ -89,7 +89,7 @@ Intent (natural language)  +  Network State
 |------|--------|
 | Resource allocation | WirelessAgent, ReLLM, 6GAgentGym, WirelessBench |
 | Beamforming / PHY optimization | ComAgent, WirelessBench |
-| Semantic communication-control co-design | Task-Oriented Co-Design of Communication, Computing, and Control for Edge-Enabled Industrial Cyber-Physical Systems, Communication-Control Codesign for Large-Scale Wireless Networked Control Systems |
+| Communication-control co-design | COAgent |
 | Capacity planning | MeshAgent, NetArena (MALT) |
 | Spectrum management | BLAST |
 | Energy efficiency | Intent-LLM |
