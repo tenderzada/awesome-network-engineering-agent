@@ -174,7 +174,7 @@ Building agent capability through framework design on top of frozen models. Capa
 | [Confucius](https://dl.acm.org/doi/10.1145/3718958.3750537) | SIGCOMM 2025 | Multi-agent LLM + DAG planning + RAG, deployed at Meta | - |
 | [MeshAgent](https://zaoxing.github.io/papers/2026/SIGMETRICS26_MeshAgent.pdf) | SIGMETRICS 2026 | Constraint-guided generation with domain-specific invariants | - |
 | [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1) | arXiv 2024 | Perception-memory-planning-action framework for wireless tasks | [GitHub](https://github.com/jwentong/WirelessAgent_R1) |
-| [LLM-RAO](https://arxiv.org/abs/2502.02287) | arXiv 2025 | LLM-RAO framework for dynamic wireless resource allocation under changing objectives and QoS constraints | [GitHub] (https://arxiv.org/abs/2502.02287) |
+| [LLM-RAO](https://arxiv.org/abs/2502.02287) | arXiv 2025 | LLM-based resource allocation optimizer for dynamic wireless environments with changing objectives and QoS constraints, no retraining required | - |
 | [INTA](https://arxiv.org/abs/2501.08760) | IEEE ICNP 2025 | Intent-based RAG for cross-vendor config translation, 98.15% syntactic correctness | - |
 | [Clarify](https://conferences.sigcomm.org/hotnets/2025/papers/hotnets25-final189.pdf) | HotNets 2025 | Interactive disambiguation for ACL/route-map synthesis | - |
 | [MNC](https://www.sciencedirect.com/science/article/pii/S2667305325000572) | Elsevier 2025 | Three-module multi-agent with CoT and reflection | - |
