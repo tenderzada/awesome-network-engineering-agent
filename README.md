@@ -193,7 +193,6 @@ Building agent capability through closed-loop interaction with network simulator
 | [GenOnet](https://github.com/frezazadeh/LangChain-RAG-Technology) | IEEE 6GNet 2024 | Multi-agent NL-to-ns-3 code generation with RAG | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
 | [Generative 6G Sim](https://arxiv.org/abs/2503.13402) | IEEE ICC 2025 | Extended GenOnet for 5G/6G with 5G-LENA validation | [GitHub](https://github.com/frezazadeh/LangChain-RAG-Technology) |
 | [6GAgentGym](https://arxiv.org/abs/2603.29656) | arXiv 2026 | 42 typed tools + NS-3 calibrated env + SFT/RL closed-loop training, 8B matches GPT-5 | - |
-| [Task-Oriented Co-Design of Communication, Computing, and Control for Edge-Enabled Industrial Cyber-Physical Systems](https://arxiv.org/abs/2503.08661) | IEEE JSAC 2025 | Task-oriented JSCC + delay-aware control prediction co-designed and validated in CARLA | - |
 | [AutoRAN](https://ieeexplore.ieee.org/) | IEEE TMC 2025 | Cloud-native + LLM intent parsing for zero-touch Open RAN deployment and testing | - |
 
 ---
