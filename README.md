@@ -442,6 +442,10 @@ World models enable agents to predict the consequences of actions before executi
 
 Semantic communication is becoming increasingly important as future communication networks move beyond bit-level delivery toward task-relevant information delivery. This creates a new optimization frontier for network engineering agents: instead of optimizing links solely for throughput, delay, or packet delivery, agents should reason about how communication decisions affect downstream control and actuation quality. In this setting, a network engineering agent may need to observe network and task state, generate actions such as semantic compression, scheduling, power allocation, or policy adjustment, execute them in the network environment, and verify both communication and control outcomes. This makes **semantic-aware communication-control co-design** a relevant emerging direction for AI agents that autonomously configure, optimize, and operate communication networks.
 
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [Wireless Agentic AI with Retrieval-Augmented Multimodal Semantic Perception](https://arxiv.org/abs/2505.23275) | IEEE Communications Magazine 2026 | Connects wireless semantic communication with LLM-enabled agentic AI, multimodal perception, multi-agent collaboration, and DRL-based bandwidth-aware semantic scheduling |
+
 ---
 
 ## Contributing
