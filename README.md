@@ -44,7 +44,6 @@ Papers, benchmarks, and tools for building AI agents that autonomously configure
   - [5.3 Computational Efficiency and Real-Time Performance](#53-computational-efficiency-and-real-time-performance)
   - [5.4 Omni-Modal Network Engineering Agents](#54-omni-modal-network-engineering-agents)
   - [5.5 World Models for Network Agents](#55-world-models-for-network-agents)
-  - [5.6 Semantic-Native Communication-Control Co-Design](#56-semantic-native-communication-control-co-design)
 - [Contributing](#contributing)
 
 ---
@@ -438,15 +437,6 @@ World models enable agents to predict the consequences of actions before executi
 |-------|-------|-----------|
 | [World Model Framework](https://arxiv.org/abs/2602.01630) | arXiv 2026 | Normative framework integrating interaction, perception, reasoning, and spatial representation |
 | [SPIRAL](https://arxiv.org/abs/2603.08403) | arXiv 2026 | Closed-loop think–act–reflect world model; PlanAgent decomposes intent, CriticAgent scores rollouts on 5 axes, inner/outer loops locally refine or globally re-plan — reflective-planning blueprint transferable to network agents as a pre-deployment safety interlock |
-
-### 5.6 Semantic-Native Communication-Control Co-Design
-
-Most current network engineering agents are still bit-centric: they optimize throughput, delay, and packet delivery, then leave control performance to downstream applications. In cyber-physical systems, this separation is often suboptimal. The communication layer should prioritize task-relevant semantic information, while the control layer should adapt to communication uncertainty, delay, and partial observability. This creates a new agentic opportunity: instead of treating wireless links as passive pipes, agents can jointly decide what semantic content to transmit, how to encode it, and how control policies should react to imperfect delivery. For network engineering agents, this direction naturally bridges PHY/MAC optimization, semantic communication, and closed-loop control.
-
-| Paper | Venue | Relevance |
-|-------|-------|-----------|
-| [Task-Oriented Co-Design of Communication, Computing, and Control for Edge-Enabled Industrial Cyber-Physical Systems](https://arxiv.org/abs/2503.08661) | IEEE JSAC 2025 | Demonstrates task-oriented JSCC and delay-aware control prediction as a unified communication-computing-control loop for industrial CPS |
-| [Communication-Control Codesign for Large-Scale Wireless Networked Control Systems](https://arxiv.org/abs/2410.11316) | arXiv 2024 | Frames large-scale WNCS codesign as sequential decision making over fading channels, highlighting joint scheduling-control-communication optimization |
 
 ---
 
