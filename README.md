@@ -446,6 +446,7 @@ Semantic communication is becoming increasingly important as future communicatio
 |-------|-------|-----------|
 | [Wireless Agentic AI with Retrieval-Augmented Multimodal Semantic Perception](https://arxiv.org/abs/2505.23275) | IEEE Communications Magazine 2026 | Connects wireless semantic communication with LLM-enabled agentic AI, multimodal perception, multi-agent collaboration, and DRL-based bandwidth-aware semantic scheduling |
 | [Semantic-Aware Resource Management for C-V2X Platooning via Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2411.04672) | arXiv 2025 | Shows how semantic-aware wireless resource allocation can be coupled with cooperative control scenarios using MARL in connected autonomous driving |
+| [COAgent (Deep RL of Event-Triggered Communication and Consensus-Based Control for Distributed Cooperative Transport)](https://arxiv.org/abs/2212.01958) | Robotics and Autonomous Systems 2022 | Jointly learns event-triggered communication (when to talk) and consensus-based control (how to agree) via DRL; transferable blueprint for when and what network agents should exchange under bandwidth pressure |
 
 ---
 
