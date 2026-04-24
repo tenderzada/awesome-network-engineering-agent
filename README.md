@@ -44,6 +44,7 @@ Papers, benchmarks, and tools for building AI agents that autonomously configure
   - [5.3 Computational Efficiency and Real-Time Performance](#53-computational-efficiency-and-real-time-performance)
   - [5.4 Omni-Modal Network Engineering Agents](#54-omni-modal-network-engineering-agents)
   - [5.5 World Models for Network Agents](#55-world-models-for-network-agents)
+  - [5.6 Semantic-Aware Communication-Control Co-Design](#56-semantic-aware-communication-control-co-design)
 - [Contributing](#contributing)
 
 ---
@@ -88,6 +89,7 @@ Intent (natural language)  +  Network State
 |------|--------|
 | Resource allocation | WirelessAgent, ReLLM, 6GAgentGym, WirelessBench |
 | Beamforming / PHY optimization | ComAgent, WirelessBench |
+| Communication-control co-design | COAgent |
 | Capacity planning | MeshAgent, NetArena (MALT) |
 | Spectrum management | BLAST |
 | Energy efficiency | Intent-LLM |
@@ -435,6 +437,15 @@ World models enable agents to predict the consequences of actions before executi
 |-------|-------|-----------|
 | [World Model Framework](https://arxiv.org/abs/2602.01630) | arXiv 2026 | Normative framework integrating interaction, perception, reasoning, and spatial representation |
 | [SPIRAL](https://arxiv.org/abs/2603.08403) | arXiv 2026 | Closed-loop think–act–reflect world model; PlanAgent decomposes intent, CriticAgent scores rollouts on 5 axes, inner/outer loops locally refine or globally re-plan — reflective-planning blueprint transferable to network agents as a pre-deployment safety interlock |
+
+### 5.6 Semantic-Aware Communication-Control Co-Design
+
+Semantic communication is becoming increasingly important as future communication networks move beyond bit-level delivery toward task-relevant information delivery. This creates a new optimization frontier for network engineering agents: instead of optimizing links solely for throughput, delay, or packet delivery, agents should reason about how communication decisions affect downstream control and actuation quality. In this setting, a network engineering agent may need to observe network and task state, generate actions such as semantic compression, scheduling, power allocation, or policy adjustment, execute them in the network environment, and verify both communication and control outcomes. This makes **semantic-aware communication-control co-design** a relevant emerging direction for AI agents that autonomously configure, optimize, and operate communication networks.
+
+| Paper | Venue | Relevance |
+|-------|-------|-----------|
+| [Wireless Agentic AI with Retrieval-Augmented Multimodal Semantic Perception](https://arxiv.org/abs/2505.23275) | IEEE Communications Magazine 2026 | Connects wireless semantic communication with LLM-enabled agentic AI, multimodal perception, multi-agent collaboration, and DRL-based bandwidth-aware semantic scheduling |
+| [Semantic-Aware Resource Management for C-V2X Platooning via Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2411.04672) | arXiv 2025 | Shows how semantic-aware wireless resource allocation can be coupled with cooperative control scenarios using MARL in connected autonomous driving |
 
 ---
 
