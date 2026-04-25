@@ -184,6 +184,8 @@ Building agent capability through framework design on top of frozen models. Capa
 | [Intent-LLM](https://ieeexplore.ieee.org/document/11169296/) | IEEE TCCN 2025 | Structured 4-round prompting + API-defined action space (VipeeGPT) | - |
 | [SCA-LLM](https://arxiv.org/abs/2509.08139) | arXiv 2025 | Spectral-attentive LLM world model for sense-predict-plan agentic communications | - |
 | [Autonomous O-RAN Agentic AI](https://arxiv.org/abs/2602.14117) | arXiv 2026 | Multi-scale LLM + SLM + WPFM agents across Non-RT / Near-RT RIC / DU | - |
+| [AgentRAN](https://arxiv.org/abs/2508.17778) | arXiv 2025 | Self-organizing hierarchy of LLM agents decomposing intents across timescales (sub-ms to min), spatial domains, and protocol layers; AI-RAN Factory continuously synthesizes new agents from operational data; live 5G validation | - |
+| [MX-AI](https://arxiv.org/abs/2508.09197) | arXiv 2025 | Five-agent graph (planner / monitor / policy-synthesizer / validator / executor) at SMO R1 interface for live AI-RAN observability and slice reconfiguration; H2A natural-language interface | - |
 
 ### 2.3 Environment-Driven
 
